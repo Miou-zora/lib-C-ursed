@@ -1,7 +1,7 @@
-name : mirror
+name : test_compiling
 on: [push]
 jobs:
-  to_github:
+  test_compiling:
     runs-on: ubuntu-latest
     steps:
     - name: build application
