@@ -27,6 +27,8 @@ TESTS_FLAGS	=	--coverage -lcriterion -I./include
 
 LFLAGS		=	-L./lib -lmy
 
+RM			=	rm -rf
+
 NAME		=	temp_name
 
 MK			=	make -s
