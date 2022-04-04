@@ -1,0 +1,9 @@
+# binary
+*.a
+*.o
+
+# lib include
+include/my.h
+
+# IDE
+.vscode

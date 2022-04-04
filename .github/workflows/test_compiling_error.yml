@@ -1,0 +1,10 @@
+name : mirror
+on: [push]
+jobs:
+  to_github:
+    runs-on: ubuntu-latest
+    steps:
+    - name: build application
+      run: make
+    - name: run app
+      run: ./lem_in
