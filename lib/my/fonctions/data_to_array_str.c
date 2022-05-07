@@ -6,31 +6,20 @@
 */
 
 #include <stddef.h>
+#include <stdbool.h>
 
 int my_strlen(char const *str);
 void *my_calloc(int elem_count, int elem_size);
+int my_printf(char const *str, ...);
 
-int is_char_is_that(char c, char const *array)
+bool is_char_is_that(char c, char const *array)
 {
-    int len_array = my_strlen(array);
-
-    for (int i = 0; i < len_array; i++) {
-        if (c == array[i]) {
-            return (1);
-        }
-    }
-    return (0);
+    return ((array == NULL || *array == '\0') ? false : (*array == c) ? true : (is_char_is_that(c, array + 1)) ? true : false);
 }
 
 int number_of_word_start(char const *str, char *sep)
 {
-    int len = 0;
-
-    for (int i = 0; str[i]; i++) {
-        if (is_char_is_that(str[i], sep))
-            len++;
-    }
-    return (len);
+    return ((sep == NULL || str == NULL) ? 0 : (*str == '\0') ? 0 : ((is_char_is_that(*str, sep)) ? 1 : 0) + (number_of_word_start(str + 1, sep)));
 }
 
 char **data_to_array_str(char *new, char *sep)

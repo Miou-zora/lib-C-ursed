@@ -7,10 +7,15 @@
 
 #include "my.h"
 
-int main(int argc, char **argv)
+int main(int ac, char **av)
 {
-    if (argc == 1) {
-        my_printf("%s", argv[0]);
+    (void)ac;
+    (void)av;
+
+    if (is_char_is_that('c', "zace")) {
+        my_putstr("yes");
+    } else {
+        my_putstr("no");
     }
     return (0);
 }

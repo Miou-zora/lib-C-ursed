@@ -7,14 +7,13 @@
 
 #include <unistd.h>
 
-void my_putchar(char c);
+int my_strlen(char const *str);
 
+// return 1 if str is null
+// return 2 if first character of str is null
+// return 84 if write doesn't works
+// return 0 if function works
 int my_putstr(char const *str)
 {
-    if (str == NULL)
-        return (-1);
-    for (int i = 0; str[i] != '\0'; i++) {
-        my_putchar(str[i]);
-    }
-    return (0);
+    return ((str == NULL) ? 1 : (*str == 0) ? 2 : (write(1, str, my_strlen(str)) == -1) ? 84 : 0);
 }
