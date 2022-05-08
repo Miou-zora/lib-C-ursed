@@ -7,12 +7,7 @@
 
 #include <stddef.h>
 
-int get_len_array(char **array)
+unsigned int get_len_array(void *array)
 {
-    int i = 0;
-
-    while (array[i] != NULL) {
-        i++;
-    }
-    return (i);
+    return ((array == NULL) ? 0 : ((*(void **)array) != NULL) ? (1 + get_len_array((((void **)array) + 1))) : 0);
 }

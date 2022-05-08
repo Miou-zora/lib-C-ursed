@@ -52,6 +52,6 @@ char *my_itoa(int);
 int get_nbrlen(int);
 int my_printf(char const *str, ...);
 char **data_to_array_str(char *str, char *sep);
-int get_len_array(char **array);
+unsigned int get_len_array(void *array);
 bool is_char_is_that(char c, char const *array);
-int number_of_word_start(char const *str, char *sep);
+unsigned int number_of_word_start(char const *str, char *sep);
