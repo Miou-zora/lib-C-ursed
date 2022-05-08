@@ -5,11 +5,7 @@
 ** get_nbrlen
 */
 
-int get_nbrlen(int nb)
+unsigned int get_nbrlen(int nb)
 {
-    int out_len = 0;
-
-    for (; nb != 0; out_len++)
-        nb /= 10;
-    return (out_len);
+    return ((nb != 0) ? (1 + get_nbrlen(nb / 10)) : 0);
 }

@@ -49,7 +49,7 @@ char *my_str_without_char_array(char *, char *);
 void *my_calloc(int, int);
 void *my_memset(void *, int, int);
 char *my_itoa(int);
-int get_nbrlen(int);
+unsigned int get_nbrlen(int);
 int my_printf(char const *str, ...);
 char **data_to_array_str(char *str, char *sep);
 unsigned int get_len_array(void *array);
