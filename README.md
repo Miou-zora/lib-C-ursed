@@ -12,3 +12,7 @@ Do unit tests.
 Regards, UwU.
 
 Miouzora. Student of Epitech Nantes.
+
+Task:
+:heavy_check_mark: UwU
+:x: OwO
