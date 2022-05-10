@@ -19,7 +19,7 @@ Task:
 - [ ] my_fputthat
 - [ ] my_getnbr
 - [ ] my_is_prime
-- [ ] my_isneg
+- [ ] my_isneg (to update)
 - [X] my_max
 - [ ] my_memset
 - [X] my_min
