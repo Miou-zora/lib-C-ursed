@@ -7,29 +7,29 @@ It is still not recommended to use it for people who are not experienced in C, i
 
 Task:
 
-- [X] data_to_array_str
-- [ ] get_len_array
-- [ ] get_nbrlen
-- [ ] my_abs
-- [ ] my_calloc
-- [ ] my_compute_power_rec
-- [ ] my_compute_square_root
-- [ ] my_convert_base
+- [ ] data_to_array_str (partially)
+- [X] get_len_array
+- [X] get_nbrlen
+- [X] my_abs
+- [X] my_calloc (to update)
+- [X] my_compute_power_rec
+- [X] my_compute_square_root
+- [ ] my_convert_base (partially)
 - [ ] my_find_prime_sup
 - [ ] my_fputthat
 - [ ] my_getnbr
 - [ ] my_is_prime
 - [ ] my_isneg
-- [ ] my_max
+- [X] my_max
 - [ ] my_memset
-- [ ] my_min
+- [X] my_min
 - [ ] my_printf
 - [ ] my_put_nbr
-- [ ] my_putchar
-- [ ] my_putstr
+- [ ] my_putchar (to update)
+- [X] my_putstr
 - [ ] my_revstr
-- [ ] my_showmem
-- [ ] my_showstr
+- [ ] my_showmem (to create)
+- [ ] my_showstr (to create)
 - [ ] my_sort_int_array
 - [ ] my_str_isalpha
 - [ ] my_str_isan
@@ -38,6 +38,21 @@ Task:
 - [ ] my_str_isprintable
 - [ ] my_str_isupper
 - [ ] my_str_without_char_array
+- [ ] my_str_without_space
+- [ ] my_strcapitalize
+- [ ] my_strcat
+- [ ] my_strcmp
+- [ ] my_strcpy
+- [ ] my_strdup
+- [ ] my_strlen
+- [ ] my_strlowcase
+- [ ] my_strncat
+- [ ] my_strncmp
+- [ ] my_strncpy
+- [ ] my_strstr
+- [ ] my_strupcase
+- [ ] my_swap
+- [ ] myf_putbase
 
 We will move forward with our defeats and our victories to evolve into a perfect world.
 Do unit tests.
