@@ -5,20 +5,24 @@
 ** my_convert_base
 */
 
+#include <stddef.h>
+
 char *my_revstr(char *str);
 
 void *my_calloc(int elem_count, int elem_size);
-
+int get_nbrlen(int nb);
 int my_strlen(char const *str);
+int my_printf(char const *str, ...);
+
+int *r1_get_nblen(int *para)
+{
+    return ((!para[0]) ?
+    para : r1_get_nblen((int[]){para[0] / para[1], para[1], para[2] + 1}));
+}
 
 int get_nblen(int number, int blen)
 {
-    int i = 1;
-    while (number) {
-        number = number / blen;
-        i += 1;
-    }
-    return (i);
+    return (r1_get_nblen((int[]){number, blen, 1})[2]);
 }
 
 char *convert_base(long long number, char *base)
@@ -34,16 +38,34 @@ char *convert_base(long long number, char *base)
     return (new_base);
 }
 
+char *m1_convert_octa_set_str(char *str)
+{
+    return ((str == NULL) ?
+    NULL : ((str[0] = '0') != '0') ?
+    NULL : ((str[1] = '0') != '0') ?
+    NULL : ((str[2] = '0') != '0') ?
+    NULL : str);
+}
+
+char *r1_convert_octa_set_str(char *str, int nbr)
+{
+    return ((str == NULL) ?
+    NULL : (nbr <= 0) ?
+    str : (str[my_strlen(str)] = nbr % 8 + '0') ?
+    ((nbr = nbr / 8) != 0) ?
+        r1_convert_octa_set_str(str, nbr) : str
+    : str);
+}
+
+// char
+
 char *convert_octa(int nbr)
 {
-    char *str = my_calloc(3, sizeof(char *));
-
-    str[0] = '0';
-    str[1] = '0';
-    str[2] = '0';
-    for (int i = 0; nbr; i++) {
-        str[2 - i] = nbr % 8 + '0';
-        nbr = nbr / 8;
-    }
-    return (str);
+    return (my_revstr(
+        r1_convert_octa_set_str(
+            my_calloc(
+                get_nbrlen(nbr) * 10 / 8 + 1, sizeof(char)
+            ), nbr
+        )
+    ));
 }

@@ -50,7 +50,8 @@ SRC		=	fonctions/my_compute_power_rec.c		\
 			fonctions/my_convert_base.c				\
 			fonctions/my_fputthat.c					\
 			fonctions/data_to_array_str.c			\
-			fonctions/get_len_array.c
+			fonctions/get_len_array.c				\
+			fonctions/function_for_void_function.c	\
 
 OBJ		=	$(SRC:%.c=%.o)
 

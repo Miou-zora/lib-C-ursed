@@ -6,12 +6,9 @@
 ** where p is the second argument.
 */
 
-int my_compute_power_rec(int nb , int p)
+float my_compute_power_rec(float nb , int power)
 {
-    if (p == 0)
-        return (1);
-    else if (p < 0)
-        return (0);
-    else
-        return (nb * my_compute_power_rec(nb, p - 1));
+    return ((power == 0) ?
+    1 : (power > 0) ?
+    (nb * my_compute_power_rec(nb, power - 1)) : ((nb * my_compute_power_rec(nb, power + 1))));
 }

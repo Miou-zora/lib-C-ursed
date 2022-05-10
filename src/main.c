@@ -7,6 +7,7 @@
 
 #include "my.h"
 #include <stddef.h>
+#include <stdlib.h>
 
 int main(int ac, char **av)
 {

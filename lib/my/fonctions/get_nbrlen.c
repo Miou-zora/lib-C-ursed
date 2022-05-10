@@ -7,5 +7,6 @@
 
 unsigned int get_nbrlen(int nb)
 {
-    return ((nb != 0) ? (1 + get_nbrlen(nb / 10)) : 0);
+    return ((nb != 0) ?
+    (1 + get_nbrlen(nb / 10)) : 0);
 }

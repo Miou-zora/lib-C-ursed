@@ -14,12 +14,19 @@ int my_printf(char const *str, ...);
 
 bool is_char_is_that(char c, char const *array)
 {
-    return ((array == NULL || *array == '\0') ? false : (*array == c) ? true : (is_char_is_that(c, array + 1)) ? true : false);
+    return ((array == NULL || *array == '\0') ?
+    false : (*array == c) ?
+    true : (is_char_is_that(c, array + 1)) ?
+    true : false);
 }
 
 unsigned int number_of_word_start(char const *str, char *sep)
 {
-    return ((sep == NULL || str == NULL) ? 0 : (*str == '\0') ? 0 : ((is_char_is_that(*str, sep)) ? 1 : 0) + (number_of_word_start(str + 1, sep)));
+    return ((sep == NULL || str == NULL) ?
+    0 : (*str == '\0') ?
+    0 : (
+        (is_char_is_that(*str, sep)) ?
+        1 : 0) + (number_of_word_start(str + 1, sep)));
 }
 
 char **data_to_array_str(char *new, char *sep)
