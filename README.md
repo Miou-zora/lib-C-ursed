@@ -5,14 +5,15 @@ The goal of this project is to try to reach limit of ternary and recursive funct
 If possible, this Lib C allows anyone who doesn't like Coding Style to do as they see fit.
 It is still not recommended to use it for people who are not experienced in C, in ternary and recursive functions.
 
+Task:
+
+- [X] UwU
+- [ ] OwO
+
 We will move forward with our defeats and our victories to evolve into a perfect world.
 
 Do unit tests.
 
 Regards, UwU.
 
-Miouzora. Student of Epitech Nantes.
-
-Task:
-:heavy_check_mark: UwU
-:x: OwO
+@Miou-zora. Student of Epitech Nantes.
