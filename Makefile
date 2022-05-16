@@ -66,6 +66,10 @@ tests_run:		tclean $(NAME)
 			gcovr -e tests -bu
 			@$(MK) tclean
 
+lib_tests_run:
+			@$(MK) -C lib/my/ tests_run
+
+
 tclean:
 			@$(RM) tests/*.gcda
 			@$(RM) tests/*.gcno

@@ -53,13 +53,23 @@ SRC		=	fonctions/my_compute_power_rec.c		\
 			fonctions/get_len_array.c				\
 			fonctions/function_for_void_function.c	\
 
+TEST_FONC	=	tests/test_my_putchar.c
+
+TESTS_FLAGS	=	--coverage -lcriterion -I./include
+
 OBJ		=	$(SRC:%.c=%.o)
 
 NAME	=	libmy.a
 
+RM			=	rm -rf
+
+TEST_BINARY	=	unit_tests
+
 MV		=	mv
 
 CFLAGS	= 	-Wall -Wextra -Wshadow
+
+MK			=	make -s
 
 AC		=	ar rc
 
@@ -72,6 +82,22 @@ all:	$(NAME)
 		@$(MV) $(NAME) ../
 		@mkdir -p ../../include
 		@$(CP) include/my.h ../../include/my.h
+
+tclean:
+		@$(RM) tests/*.gcda
+		@$(RM) tests/*.gcno
+		@$(RM) *.gcda
+		@$(RM) *.gcno
+		@$(RM) $(TEST_BINARY)
+
+tests_run:		tclean
+		@$(CC) $(SRC) $(TEST_FONC) $(TESTS_FLAGS) $(LFLAGS) -o $(TEST_BINARY)
+		./$(TEST_BINARY)
+		@printf "\033[32m[Message]\033[39m Compilation de tests réussi !\n"
+		mv *.gc* tests
+		gcovr -e tests
+		gcovr -e tests -bu
+		$(MK) tclean
 
 $(NAME):	$(OBJ)
 		@$(AC) $(NAME) $(OBJ)

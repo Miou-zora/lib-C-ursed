@@ -7,7 +7,7 @@
 ** contains another type of character.
 */
 
-int my_str_isalpha(char const *str)
+int my_str_isan(char const *str)
 {
     if (!str[0])
         return (1);

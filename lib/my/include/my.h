@@ -43,7 +43,6 @@ int my_max(int, int);
 int my_min(int, int);
 int my_abs(int);
 char *rm_space(char *);
-int my_str_isalpha(char const *);
 char *my_strdup(char const *);
 char *my_str_without_char_array(char *, char *);
 void *my_calloc(int, int);
