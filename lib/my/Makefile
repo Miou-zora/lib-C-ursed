@@ -54,7 +54,9 @@ SRC		=	fonctions/my_compute_power_rec.c		\
 			fonctions/function_for_void_function.c	\
 			fonctions/print_error_and_return.c		\
 
-TEST_FONC	=	tests/test_my_putchar.c
+TEST_FONC	=	tests/test_my_putchar.c				\
+				tests/test_my_putstr.c				\
+				tests/test_my_strlen.c				\
 
 TESTS_FLAGS	=	--coverage -lcriterion -I./include
 

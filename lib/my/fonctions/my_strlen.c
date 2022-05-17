@@ -6,13 +6,18 @@
 ** characters found in the string passed as parameter.
 */
 
-void my_putchar(char);
+#include <stddef.h>
+
+int my_printf(char const *str, ...);
+
+int r1_my_strlen(char const *str, int index)
+{
+    return (str[index] == '\0') ?
+    index : r1_my_strlen(str, index + 1);
+}
 
 int my_strlen(char const *str)
 {
-    int index = 0;
-    while (str[index] != '\0') {
-        index = index + 1;
-    }
-    return (index);
+    return (str == NULL) ?
+    0 : r1_my_strlen(str, 0);
 }

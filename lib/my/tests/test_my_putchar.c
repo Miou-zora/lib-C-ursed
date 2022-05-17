@@ -10,7 +10,7 @@
 
 int my_putchar(char c);
 
-void redirect_all_stdout(void)
+static void redirect_all_stdout(void)
 {
     cr_redirect_stdout();
     cr_redirect_stderr();
@@ -28,7 +28,7 @@ Test(my_putchar, casual, .init=redirect_all_stdout)
 Test(my_putchar, print_zero, .init=redirect_all_stdout)
 {
     int result = my_putchar('\0');
-    int expected = 84;
+    int expected = 0;
 
     cr_assert_eq(result, expected);
 }
