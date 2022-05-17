@@ -57,6 +57,7 @@ SRC		=	fonctions/my_compute_power_rec.c		\
 TEST_FONC	=	tests/test_my_putchar.c				\
 				tests/test_my_putstr.c				\
 				tests/test_my_strlen.c				\
+				tests/test_get_nbrlen.c				\
 
 TESTS_FLAGS	=	--coverage -lcriterion -I./include
 
