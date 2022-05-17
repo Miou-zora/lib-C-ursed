@@ -12,6 +12,6 @@ int print_error_and_return(const char *error);
 int my_putchar(char c)
 {
     return ((c == 0) ?
-    print_error_and_return("Try to print invalid character\n") : write(1, &c, 1) == -1) ?
+    84 : write(1, &c, 1) == -1) ?
     84 : 0;
 }

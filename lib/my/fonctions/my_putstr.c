@@ -8,12 +8,12 @@
 #include <unistd.h>
 
 int my_strlen(char const *str);
+int print_error_and_return(const char *error);
 
-// return 1 if str is null
-// return 2 if first character of str is null
-// return 84 if write doesn't works
-// return 0 if function works
 int my_putstr(char const *str)
 {
-    return ((str == NULL) ? 1 : (*str == 0) ? 2 : (write(1, str, my_strlen(str)) == -1) ? 84 : 0);
+    return ((str == NULL) ?
+    0 : (*str == 0) ?
+    0 : (write(1, str, my_strlen(str)) == -1) ?
+    84 : 0);
 }

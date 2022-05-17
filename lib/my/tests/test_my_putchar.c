@@ -18,8 +18,17 @@ void redirect_all_stdout(void)
 
 Test(my_putchar, casual, .init=redirect_all_stdout)
 {
-    my_putchar('a');
+    int result = my_putchar('a');
+    int expected = 0;
 
+    cr_assert_eq(result, expected);
     cr_assert_stdout_eq_str("a");
-    my_putchar('\0');
+}
+
+Test(my_putchar, print_zero, .init=redirect_all_stdout)
+{
+    int result = my_putchar('\0');
+    int expected = 84;
+
+    cr_assert_eq(result, expected);
 }
