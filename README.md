@@ -1,4 +1,4 @@
-# cursed libmy
+# lib C ursed
 
 The goal of this project is to try to reach limit of ternary and recursive functions of the libmy (Epitech Small C Pool LibC).
 
