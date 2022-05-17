@@ -2,12 +2,16 @@
 ** EPITECH PROJECT, 2021
 ** my_putchar.c
 ** File description:
-** A function who print a character.
+** A function that print a character.
 */
 
 #include <unistd.h>
 
-void my_putchar(char c)
+int print_error_and_return(const char *error);
+
+int my_putchar(char c)
 {
-    write(1, &c, 1);
+    return ((c == 0) ?
+    print_error_and_return("Try to print invalid character\n") : write(1, &c, 1) == -1) ?
+    84 : 0;
 }

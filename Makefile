@@ -71,6 +71,7 @@ lib_tests_run:
 
 
 tclean:
+			@$(MK) -C lib/my/ tclean
 			@$(RM) tests/*.gcda
 			@$(RM) tests/*.gcno
 			@$(RM) *.gcda

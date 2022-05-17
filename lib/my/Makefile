@@ -52,6 +52,7 @@ SRC		=	fonctions/my_compute_power_rec.c		\
 			fonctions/data_to_array_str.c			\
 			fonctions/get_len_array.c				\
 			fonctions/function_for_void_function.c	\
+			fonctions/print_error_and_return.c		\
 
 TEST_FONC	=	tests/test_my_putchar.c
 
