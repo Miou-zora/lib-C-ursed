@@ -7,52 +7,53 @@ It is still not recommended to use it for people who are not experienced in C, i
 
 Task:
 
-- [ ] data_to_array_str (partially)
-- [X] get_len_array
-- [X] get_nbrlen
-- [X] my_abs
-- [X] my_calloc (to update)
-- [X] my_compute_power_rec
-- [X] my_compute_square_root
-- [ ] my_convert_base (partially)
-- [ ] my_find_prime_sup
-- [ ] my_fputthat
-- [ ] my_getnbr
-- [ ] my_is_prime
-- [ ] my_isneg (to update)
-- [X] my_max
-- [ ] my_memset
-- [X] my_min
-- [ ] my_printf
-- [ ] my_put_nbr
-- [ ] my_putchar (to update)
-- [X] my_putstr
-- [ ] my_revstr
-- [ ] my_showmem (to create)
-- [ ] my_showstr (to create)
-- [ ] my_sort_int_array
-- [ ] my_str_isalpha
-- [ ] my_str_isan
-- [ ] my_str_islower
-- [ ] my_str_isnum
-- [ ] my_str_isprintable
-- [ ] my_str_isupper
-- [ ] my_str_without_char_array
-- [ ] my_str_without_space
-- [ ] my_strcapitalize
-- [ ] my_strcat
-- [ ] my_strcmp
-- [ ] my_strcpy
-- [ ] my_strdup
-- [ ] my_strlen
-- [ ] my_strlowcase
-- [ ] my_strncat
-- [ ] my_strncmp
-- [ ] my_strncpy
-- [ ] my_strstr
-- [ ] my_strupcase
-- [ ] my_swap
-- [ ] myf_putbase
+Created / Tested / Name
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) data_to_array_str (partially)
+- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) get_len_array
+- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) get_nbrlen
+- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_abs
+- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_calloc (to update)
+- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_compute_power_rec
+- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_compute_square_root
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_convert_base (partially)
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_find_prime_sup
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_fputthat
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_getnbr
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_is_prime
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_isneg (to update)
+- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_max
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_memset
+- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_min
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_printf
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_put_nbr
+- [X] ![#c5f015](https://via.placeholder.com/15/00ff00/000000?text=+) my_putchar
+- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_putstr
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_revstr
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_showmem (to create)
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_showstr (to create)
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_sort_int_array
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isalpha
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isan
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_islower
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isnum
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isprintable
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isupper
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_without_char_array
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_without_space
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strcapitalize
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strcat
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strcmp
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strcpy
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strdup
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strlen
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strlowcase
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strncat
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strncmp
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strncpy
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strstr
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strupcase
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_swap
+- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) myf_putbase
 
 We will move forward with our defeats and our victories to evolve into a perfect world.
 Do unit tests.
