@@ -8,25 +8,25 @@ It is still not recommended to use it for people who are not experienced in C, i
 Task:
 
 Created / Tested / Name
-- [ ] :red_square: data_to_array_str (partially)
-- [X] :green_square: get_nbrlen
-- [X] :green_square: my_abs
-- [X] :red_square: my_calloc (to update)
-- [X] :red_square: my_compute_power_rec
-- [X] :red_square: my_compute_square_root
-- [ ] :red_square: my_convert_base (partially)
+- :red_square: :red_square: data_to_array_str (partially)
+- :green_square: :green_square: get_nbrlen
+- :green_square: :green_square: my_abs
+- :green_square: :red_square: my_calloc (to update)
+- :green_square: :red_square: my_compute_power_rec
+- :red_square: :red_square: my_compute_square_root
+- :red_square: :red_square: my_convert_base (partially)
 - [ ] :red_square: my_find_prime_sup
 - [ ] :red_square: my_fputthat
 - [ ] :red_square: my_getnbr
 - [ ] :red_square: my_is_prime
 - [ ] :red_square: my_isneg (to update)
-- [X] :green_square: my_max
+- :green_square: :green_square: my_max
 - [ ] :red_square: my_memset
-- [X] :green_square: my_min
+- :green_square: :green_square: my_min
 - [ ] :red_square: my_printf
 - [ ] :red_square: my_put_nbr
-- [X] :green_square: my_putchar
-- [X] :green_square: my_putstr
+- :green_square: :green_square: my_putchar
+- :green_square: :green_square: my_putstr
 - [ ] :red_square: my_revstr
 - [ ] :red_square: my_showmem (to create)
 - [ ] :red_square: my_showstr (to create)
@@ -44,7 +44,7 @@ Created / Tested / Name
 - [ ] :red_square: my_strcmp
 - [ ] :red_square: my_strcpy
 - [ ] :red_square: my_strdup
-- [X] :green_square: my_strlen
+- :green_square: :green_square: my_strlen
 - [ ] :red_square: my_strlowcase
 - [ ] :red_square: my_strncat
 - [ ] :red_square: my_strncmp
