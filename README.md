@@ -8,52 +8,51 @@ It is still not recommended to use it for people who are not experienced in C, i
 Task:
 
 Created / Tested / Name
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) data_to_array_str (partially)
-- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) get_len_array
-- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) get_nbrlen
-- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_abs
-- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_calloc (to update)
-- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_compute_power_rec
-- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_compute_square_root
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_convert_base (partially)
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_find_prime_sup
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_fputthat
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_getnbr
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_is_prime
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_isneg (to update)
-- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_max
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_memset
-- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_min
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_printf
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_put_nbr
-- [X] ![#c5f015](https://via.placeholder.com/15/00ff00/000000?text=+) my_putchar
-- [X] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_putstr
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_revstr
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_showmem (to create)
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_showstr (to create)
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_sort_int_array
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isalpha
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isan
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_islower
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isnum
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isprintable
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_isupper
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_without_char_array
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_str_without_space
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strcapitalize
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strcat
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strcmp
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strcpy
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strdup
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strlen
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strlowcase
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strncat
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strncmp
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strncpy
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strstr
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_strupcase
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) my_swap
-- [ ] ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) myf_putbase
+- [ ] :red_square: data_to_array_str (partially)
+- [X] :green_square: get_nbrlen
+- [X] :green_square: my_abs
+- [X] :red_square: my_calloc (to update)
+- [X] :red_square: my_compute_power_rec
+- [X] :red_square: my_compute_square_root
+- [ ] :red_square: my_convert_base (partially)
+- [ ] :red_square: my_find_prime_sup
+- [ ] :red_square: my_fputthat
+- [ ] :red_square: my_getnbr
+- [ ] :red_square: my_is_prime
+- [ ] :red_square: my_isneg (to update)
+- [X] :green_square: my_max
+- [ ] :red_square: my_memset
+- [X] :green_square: my_min
+- [ ] :red_square: my_printf
+- [ ] :red_square: my_put_nbr
+- [X] :green_square: my_putchar
+- [X] :green_square: my_putstr
+- [ ] :red_square: my_revstr
+- [ ] :red_square: my_showmem (to create)
+- [ ] :red_square: my_showstr (to create)
+- [ ] :red_square: my_sort_int_array
+- [ ] :red_square: my_str_isalpha
+- [ ] :red_square: my_str_isan
+- [ ] :red_square: my_str_islower
+- [ ] :red_square: my_str_isnum
+- [ ] :red_square: my_str_isprintable
+- [ ] :red_square: my_str_isupper
+- [ ] :red_square: my_str_without_char_array
+- [ ] :red_square: my_str_without_space
+- [ ] :red_square: my_strcapitalize
+- [ ] :red_square: my_strcat
+- [ ] :red_square: my_strcmp
+- [ ] :red_square: my_strcpy
+- [ ] :red_square: my_strdup
+- [X] :green_square: my_strlen
+- [ ] :red_square: my_strlowcase
+- [ ] :red_square: my_strncat
+- [ ] :red_square: my_strncmp
+- [ ] :red_square: my_strncpy
+- [ ] :red_square: my_strstr
+- [ ] :red_square: my_strupcase
+- [ ] :red_square: my_swap
+- [ ] :red_square: myf_putbase
 
 We will move forward with our defeats and our victories to evolve into a perfect world.
 Do unit tests.
