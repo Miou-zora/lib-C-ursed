@@ -6,14 +6,10 @@
 ** parameter is negative or P, if positive or null.
 */
 
-void my_putchar(char c);
+#include <stdbool.h>
 
-int my_isneg(int n)
+bool my_isneg(int n)
 {
-    if (n >= 0) {
-        my_putchar('P');
-    } else {
-        my_putchar('N');
-    }
-    return (0);
+    return (n >= 0) ?
+    false : true;
 }

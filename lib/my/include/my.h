@@ -34,7 +34,7 @@ int my_putstr(char const *);
 int my_put_nbr(long long);
 int my_putchar(char c);
 int my_is_prime(int);
-int my_isneg(int);
+bool my_isneg(int number);
 int my_getnbr(char const *);
 int my_find_prime_sup(int);
 int my_compute_square_root(int);

@@ -60,6 +60,7 @@ TEST_FONC	=	tests/test_my_putchar.c				\
 				tests/test_my_abs.c					\
 				tests/test_my_min.c					\
 				tests/test_my_max.c					\
+				tests/test_my_isneg.c				\
 
 TESTS_FLAGS	=	--coverage -lcriterion -I./include
 
