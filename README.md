@@ -12,14 +12,14 @@ Created / Tested / Name
 - :green_square: :green_square: get_nbrlen
 - :green_square: :green_square: my_abs
 - :green_square: :red_square: my_calloc (to update)
-- :green_square: :red_square: my_compute_power_rec
+- :green_square: :green_square: my_compute_power_rec
 - :red_square: :red_square: my_compute_square_root
 - :red_square: :red_square: my_convert_base (partially)
 - :red_square: :red_square: my_find_prime_sup
 - :red_square: :red_square: my_fputthat
 - :red_square: :red_square: my_getnbr
 - :red_square: :red_square: my_is_prime
-- :red_square: :red_square: my_isneg (to update)
+- :green_square: :green_square: my_isneg
 - :green_square: :green_square: my_max
 - :red_square: :red_square: my_memset
 - :green_square: :green_square: my_min
