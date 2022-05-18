@@ -13,7 +13,7 @@ bool function_for_void_function(void(*function)(void *), void *its_a_trap);
 
 void *r1_my_calloc(int elem_count, int elem_size, char *ptr)
 {
-    return ((elem_count == 0 || elem_size == 0) ?
+    return ((elem_count <= 0 || elem_size <= 0) ?
     NULL : ((ptr = malloc(elem_count * elem_size)) == NULL) ?
     NULL : (my_memset(ptr, 0, elem_count * elem_size) == NULL) ?
         (function_for_void_function(&free, ptr)) ?
