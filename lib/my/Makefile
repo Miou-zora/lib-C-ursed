@@ -50,7 +50,6 @@ SRC		=	fonctions/my_compute_power_rec.c		\
 			fonctions/my_convert_base.c				\
 			fonctions/my_fputthat.c					\
 			fonctions/data_to_array_str.c			\
-			fonctions/get_len_array.c				\
 			fonctions/function_for_void_function.c	\
 			fonctions/print_error_and_return.c		\
 
@@ -58,6 +57,9 @@ TEST_FONC	=	tests/test_my_putchar.c				\
 				tests/test_my_putstr.c				\
 				tests/test_my_strlen.c				\
 				tests/test_get_nbrlen.c				\
+				tests/test_my_abs.c					\
+				tests/test_my_min.c					\
+				tests/test_my_max.c					\
 
 TESTS_FLAGS	=	--coverage -lcriterion -I./include
 
