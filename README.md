@@ -11,7 +11,7 @@ Created / Tested / Name
 - :red_square: :red_square: data_to_array_str (partially)
 - :green_square: :green_square: get_nbrlen
 - :green_square: :green_square: my_abs
-- :green_square: :red_square: my_calloc (to update)
+- :green_square: :green_square: my_calloc (to update)
 - :green_square: :green_square: my_compute_power_rec
 - :red_square: :red_square: my_compute_square_root
 - :red_square: :red_square: my_convert_base (partially)
