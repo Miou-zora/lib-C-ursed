@@ -15,5 +15,6 @@ int *get_square_root(int *para)
 
 int my_compute_square_root(int nb)
 {
-    return (get_square_root((int[]){0, nb})[0]);
+    return ((nb < 0) ?
+    -1 : get_square_root((int[]){0, nb})[0]);
 }

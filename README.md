@@ -13,7 +13,7 @@ Created / Tested / Name
 - :green_square: :green_square: my_abs
 - :green_square: :green_square: my_calloc
 - :green_square: :green_square: my_compute_power_rec
-- :red_square: :red_square: my_compute_square_root
+- :green_square: :green_square: my_compute_square_root
 - :red_square: :red_square: my_convert_base (partially)
 - :red_square: :red_square: my_find_prime_sup
 - :red_square: :red_square: my_fputthat
