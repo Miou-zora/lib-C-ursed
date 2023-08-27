@@ -64,6 +64,7 @@ TEST_FONC	=	tests/test_my_putchar.c				\
 				tests/test_my_compute_power_rec.c	\
 				tests/test_my_calloc.c				\
 				tests/test_my_compute_square_root.c	\
+				tests/test_data_to_array_str.c		\
 
 TESTS_FLAGS	=	--coverage -lcriterion -I./include
 
