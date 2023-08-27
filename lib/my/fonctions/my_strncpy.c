@@ -9,6 +9,9 @@ char *my_strncpy(char *dest , char const *src , int n)
 {
     int i = 0;
 
+    if (!dest || !src) {
+        return (0);
+    }
     for (; i < n && src[i] != '\0'; i++) {
         dest[i] = src[i];
     }

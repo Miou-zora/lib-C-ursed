@@ -130,3 +130,33 @@ Test(data_to_array_str, two_same_sep)
         free(result[i]);
     free(result);
 }
+
+Test(data_to_array_str, sep_at_start)
+{
+    char *new_value = ";test1;test2;test3";
+    char *sep_value = ";";
+    char **result = data_to_array_str(new_value, sep_value);
+    char *expected[] = {"", "test1", "test2", "test3", NULL};
+
+    cr_assert_not_null(result);
+    for (int i = 0; expected[i]; i++)
+        cr_assert_str_eq(result[i], expected[i]);
+    for (int i = 0; result[i]; i++)
+        free(result[i]);
+    free(result);
+}
+
+Test(data_to_array_str, sep_at_end)
+{
+    char *new_value = "test1;test2;test3;";
+    char *sep_value = ";";
+    char **result = data_to_array_str(new_value, sep_value);
+    char *expected[] = {"test1", "test2", "test3", "", NULL};
+
+    cr_assert_not_null(result);
+    for (int i = 0; expected[i]; i++)
+        cr_assert_str_eq(result[i], expected[i]);
+    for (int i = 0; result[i]; i++)
+        free(result[i]);
+    free(result);
+}

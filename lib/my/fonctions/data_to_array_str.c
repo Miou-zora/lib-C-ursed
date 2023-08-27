@@ -13,6 +13,7 @@ int my_strlen(char const *str);
 void *my_calloc(int elem_count, int elem_size);
 int my_printf(char const *str, ...);
 char *my_strdup(char const *src);
+char *my_strncpy(char *dest , char const *src , int n);
 
 bool is_char_is_that(char c, const char *array)
 {
@@ -31,30 +32,41 @@ unsigned int number_of_word_start(const char *str, const char *sep)
         1 : 0) + (number_of_word_start(str + 1, sep)));
 }
 
+unsigned int my_strlen_data(const char *str, const char *sep)
+{
+    return ((sep == NULL || str == NULL) ?
+    0 : (*str == '\0' || is_char_is_that(*str, sep)) ?
+    0 : 1 + my_strlen_data(str + 1, sep));
+}
+
+char *my_strdup_data(const char *src, const char *sep)
+{
+    return ((!src || !sep) ?
+    NULL: my_strncpy(my_calloc(my_strlen_data(src, sep) + 1, sizeof(char)), src, my_strlen_data(src, sep)));
+}
+
+bool fill_array(const char *new, const char *sep, char **array, unsigned int cursor)
+{
+    return ((!array || !new || !sep) ?
+    false : !new[cursor] ?
+    true : (cursor == 0 || (is_char_is_that(new[cursor - 1], sep)) || !new[cursor + 1] && is_char_is_that(new[cursor], sep)) ?
+        (array[0] = my_strdup_data(&new[cursor], sep)) ?
+            (array = &(array[1])) ?
+            ((fill_array(new, sep, array, cursor + 1)) ? true : false) :
+            false :
+        false :
+    (fill_array(new, sep, array, cursor + 1)) ? true : false);
+}
+
+char **data_to_array_str_with_array(const char *new, const char *sep, char **array)
+{
+    return ((!new || !sep) ?
+    NULL : (fill_array(new, sep, array, 0)) ?
+    array : NULL);
+}
+
 char **data_to_array_str(const char *new, const char *sep)
 {
-    int len_all = my_strlen(new);
-    int tmp = number_of_word_start(new, sep) + 2;
-    char **array = my_calloc(tmp, sizeof(*array));
-    char *new_dup = NULL;
-    int nbr_ptr = 0;
-    int i = 0;
-
-    if (!new || !sep)
-        return (NULL);
-    new_dup = my_strdup(new);
-    for (; i < len_all; i++) {
-        if (is_char_is_that(new[i], sep)) {
-            new_dup[i] = '\0';
-        }
-    }
-    for (i = 0; i < len_all; i++) {
-        if (i == 0 || (!new_dup[i - 1] && !is_char_is_that(new_dup[i], sep))) {
-            array[nbr_ptr] = my_strdup(&new_dup[i]);
-            nbr_ptr = nbr_ptr + 1;
-        }
-    }
-    free(new_dup);
-    array[nbr_ptr] = NULL;
-    return (array);
+    return ((!new || !sep) ?
+    NULL : data_to_array_str_with_array(new, sep, my_calloc(number_of_word_start(new, sep) + 2, sizeof(char *))));
 }
