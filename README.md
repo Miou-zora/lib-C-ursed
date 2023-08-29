@@ -8,7 +8,7 @@ It is still not recommended to use it for people who are not experienced in C, i
 Task:
 
 Created / Tested / Name
-- :red_square: :red_square: data_to_array_str (partially)
+- :green_square: :green_square: data_to_array_str (partially)
 - :green_square: :green_square: get_nbrlen
 - :green_square: :green_square: my_abs
 - :green_square: :green_square: my_calloc
