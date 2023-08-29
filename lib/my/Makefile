@@ -52,6 +52,7 @@ SRC		=	fonctions/my_compute_power_rec.c		\
 			fonctions/data_to_array_str.c			\
 			fonctions/function_for_void_function.c	\
 			fonctions/print_error_and_return.c		\
+			fonctions/my_char_is_that.c				\
 
 TEST_FONC	=	tests/test_my_putchar.c				\
 				tests/test_my_putstr.c				\
@@ -66,6 +67,7 @@ TEST_FONC	=	tests/test_my_putchar.c				\
 				tests/test_my_compute_square_root.c	\
 				tests/test_data_to_array_str.c		\
 				tests/test_my_find_prime_sup.c		\
+				tests/test_my_char_is_that.c		\
 
 TESTS_FLAGS	=	--coverage -lcriterion -I./include
 
