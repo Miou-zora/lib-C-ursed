@@ -5,14 +5,14 @@
 ** A function that returns 1 if the number is prime and 0 if not.
 */
 
-int my_is_prime(int nb)
+unsigned int my_is_prime(unsigned int nb)
 {
-    int end = nb / 4 + 1;
+    unsigned int end = nb / 4 + 1;
 
     if (nb <= 1) {
         return (0);
     }
-    for (int start = 2; start <= end; start++) {
+    for (unsigned int start = 2; start <= end; start++) {
         if (nb % start == 0) {
             return (0);
         }

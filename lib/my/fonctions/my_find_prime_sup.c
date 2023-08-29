@@ -9,10 +9,7 @@
 
 int my_is_prime(int);
 
-int my_find_prime_sup(int nb)
+unsigned int my_find_prime_sup(unsigned int nb)
 {
-    while (my_is_prime(nb) == 0) {
-        nb = nb + 1;
-    }
-    return (nb);
+    return ((my_is_prime(nb) != 0) ? nb : my_find_prime_sup(nb + 1));
 }
