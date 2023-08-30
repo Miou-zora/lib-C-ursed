@@ -5,17 +5,16 @@
 ** A function that returns 1 if the number is prime and 0 if not.
 */
 
-unsigned int my_is_prime(unsigned int nb)
-{
-    unsigned int end = nb / 4 + 1;
+#include <stdbool.h>
 
-    if (nb <= 1) {
-        return (0);
-    }
-    for (unsigned int start = 2; start <= end; start++) {
-        if (nb % start == 0) {
-            return (0);
-        }
-    }
-    return (1);
+static bool check_prime(unsigned int nb, unsigned int start, unsigned int end)
+{
+    return ((start <= end) ?
+    (nb % start == 0) ?
+        false : check_prime(nb, start + 1, end) : true);
+}
+
+bool my_is_prime(unsigned int nb)
+{
+    return ((nb <= 1) ? false : check_prime(nb, 2, nb / 4 + 1));
 }
