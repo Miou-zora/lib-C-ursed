@@ -5,39 +5,33 @@
 ** my_getnbr
 */
 
-void first_numberf(char const *str, long long *index, long long *neg)
+#include <stdbool.h>
+
+static bool is_char_number(unsigned char c)
 {
-    while (!(str[*index] >= '0' && str[*index] <= '9') && str[*index] != 0) {
-        if (str[*index] == '-') {
-            *neg = 1;
-        } else {
-            *neg = 0;
-        }
-        *index = *index + 1;
-    }
+    return (((unsigned char)(c - '0')) <= 9);
 }
 
-void transform_ifneg(long long *number, long long neg)
+static const char *get_pos_first_number(const char *str, bool *neg)
 {
-    if (neg == 1) {
-        *number = - *number;
-    }
+    return ((!(!(is_char_number(*str)) && *str)) ?
+    str : get_pos_first_number(str + 1, neg + (*neg = *str == '-') * 0));
 }
 
-long long my_getnbr(char const *str)
+static long long convert_to_number(const char *str, long long number)
 {
-    long long index = 0;
-    long long number = 0;
-    long long neg = 0;
-
-    first_numberf(str, &index, &neg);
-    if (!(str[index] >= 48 && str[index] <= 57)) {
-        return (-1);
-    }
-    while (str[index] >= 48 && str[index] <= 57) {
-        number = number * 10 + str[index] - '0';
-        index = index + 1;
-    }
-    transform_ifneg(&number, neg);
-    return number;
+    return (is_char_number(*str)) ? convert_to_number(str + 1, number * 10 + *str - '0')
+    : number;
 }
+
+static long long my_getnbr_neg(const char *str, bool neg)
+{
+    return ((!is_char_number(*(str = get_pos_first_number(str, &neg)))) ?
+    -1 : (-neg * 2 + 1) * convert_to_number(str, 0));
+}
+
+long long my_getnbr(const char *str)
+{
+    return (my_getnbr_neg(str, false));
+}
+

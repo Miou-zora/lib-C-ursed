@@ -129,3 +129,12 @@ Test(my_getnbr, min_int_value)
     cr_assert_eq(result, expected);
 }
 
+Test(my_getnbr, minus_before)
+{
+    char *str = "-+69";
+    long long expected = 69;
+
+    long long result = my_getnbr(str);
+
+    cr_assert_eq(result, expected);
+}
