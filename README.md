@@ -21,7 +21,7 @@ Created / Tested / Name
 - :green_square: :green_square: my_is_prime
 - :green_square: :green_square: my_isneg
 - :green_square: :green_square: my_max
-- :red_square: :red_square: my_memset
+- :green_square: :green_square: my_memset
 - :green_square: :green_square: my_min
 - :red_square: :red_square: my_printf
 - :red_square: :red_square: my_put_nbr
