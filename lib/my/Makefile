@@ -68,6 +68,7 @@ TEST_FONC	=	tests/test_my_putchar.c				\
 				tests/test_data_to_array_str.c		\
 				tests/test_my_find_prime_sup.c		\
 				tests/test_my_char_is_that.c		\
+				tests/test_my_getnbr.c				\
 
 TESTS_FLAGS	=	--coverage -lcriterion -I./include
 

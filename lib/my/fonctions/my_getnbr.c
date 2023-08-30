@@ -31,12 +31,12 @@ long long my_getnbr(char const *str)
     long long neg = 0;
 
     first_numberf(str, &index, &neg);
+    if (!(str[index] >= 48 && str[index] <= 57)) {
+        return (-1);
+    }
     while (str[index] >= 48 && str[index] <= 57) {
         number = number * 10 + str[index] - '0';
         index = index + 1;
-    }
-    if (!str[index] && number == 0) {
-        return (-1);
     }
     transform_ifneg(&number, neg);
     return number;
