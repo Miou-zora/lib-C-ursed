@@ -5,13 +5,7 @@
 ** my_memset
 */
 
-#include <stdlib.h>
-
-void *my_memset(void *ptr, int data, int size)
+void *my_memset(void *ptr, unsigned long long data, unsigned long long size)
 {
-    int8_t *byte_list = ptr;
-
-    for (int i = 0; i < size; i++)
-        byte_list[i] = data;
-    return (byte_list);
+    return (size--) ? my_memset(ptr, (((char *)ptr)[size] = data), size) : ptr;
 }
