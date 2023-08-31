@@ -71,6 +71,7 @@ TEST_FONC	=	tests/test_my_putchar.c				\
 				tests/test_my_getnbr.c				\
 				tests/test_my_is_prime.c			\
 				tests/test_my_memset.c				\
+				tests/test_my_put_nbr.c
 
 TESTS_FLAGS	=	--coverage -lcriterion -I./include
 

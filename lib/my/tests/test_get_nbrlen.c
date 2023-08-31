@@ -7,7 +7,7 @@
 
 #include <criterion/criterion.h>
 
-unsigned int get_nbrlen(int nb);
+unsigned int get_nbrlen(long long nb);
 
 Test(get_nbrlen, pos)
 {
