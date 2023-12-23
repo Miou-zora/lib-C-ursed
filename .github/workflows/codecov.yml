@@ -23,7 +23,6 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./lib/my/tests/
           file: ./lib/my/tests/coverage.xml
           verbose: true
 
