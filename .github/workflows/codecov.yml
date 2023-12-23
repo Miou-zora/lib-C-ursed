@@ -10,22 +10,19 @@ on:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
+    container: epitechcontent/epitest-docker
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Run tests
         run: make lib_tests_run
 
-      - name: Upload coverage reports to Codecov
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          working-directory: ./lib/my
+          gcov: true
+          token: ${{ secrets.CODECOV_TOKEN }}
 
-      # - name: Upload coverage to Codecov
-      #   uses: codecov/codecov-action@v1
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
-      #     file: ./coverage.info
-      #     flags: unittests
-      #     name: codecov-umbrella

@@ -111,11 +111,11 @@ tclean:
 tests_run:		tclean
 		@$(CC) $(SRC) $(TEST_FONC) $(TESTS_FLAGS) $(LFLAGS) -o $(TEST_BINARY)
 		./$(TEST_BINARY)
+		# ./$(TEST_BINARY) --xml=tests/coverage.xml
 		@printf "\033[32m[Message]\033[39m Compilation de tests réussi !\n"
 		mv *.gc* tests
 		gcovr -e tests
 		gcovr -e tests -bu
-		$(MK) tclean
 
 $(NAME):	$(OBJ)
 		@$(AC) $(NAME) $(OBJ)
