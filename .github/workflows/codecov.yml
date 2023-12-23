@@ -24,6 +24,4 @@ jobs:
         with:
           gcov: true
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./lib/my/tests/coverage.xml
-          verbose: true
 
