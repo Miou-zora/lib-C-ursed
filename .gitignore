@@ -11,3 +11,4 @@ include/my.h
 # Test binaries
 *.gcno
 *.gcda
+coverage.xml

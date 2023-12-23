@@ -15,27 +15,14 @@ jobs:
     container: epitechcontent/epitest-docker
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Run tests
         run: make lib_tests_run
 
-      - name: Upload coverage reports to Codecov
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
-      # - name: Upload coverage reports to Codecov
-      #   run: |
-      #     # Replace `linux` below with the appropriate OS
-      #     # Options are `alpine`, `linux`, `macos`, `windows`
-      #     curl -Os https://uploader.codecov.io/latest/linux/codecov
-      #     chmod +x codecov
-      #     ./codecov -t ${CODECOV_TOKEN}
-
-      # - name: Upload coverage to Codecov
-      #   uses: codecov/codecov-action@v1
-      #   with:
-      #     token: ${{ secrets.CODECOV_TOKEN }}
-      #     file: ./coverage.info
-      #     flags: unittests
-      #     name: codecov-umbrella
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          # file: ./lib/my/tests/coverage.xml
+          directory: ./lib/my/tests/
+          verbose: true
