@@ -67,7 +67,6 @@ Test(data_to_array_str, empty_new)
     char *new_value = "";
     char *sep_value = ";";
     char **result = data_to_array_str(new_value, sep_value);
-    char *expected[] = {NULL};
 
     cr_assert_not_null(result);
     cr_assert_null(result[0]);
@@ -94,7 +93,6 @@ Test(data_to_array_str, empty_empty)
     char *new_value = "";
     char *sep_value = "";
     char **result = data_to_array_str(new_value, sep_value);
-    char *expected[] = {NULL};
 
     cr_assert_not_null(result);
     cr_assert_null(result[0]);

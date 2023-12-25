@@ -12,7 +12,7 @@
 void *my_calloc(int elem_count, int elem_size);
 int my_printf(char const *str, ...);
 
-const bool is_all_zero(const void *ptr, size_t size, size_t number_of_element)
+bool is_all_zero(const void *ptr, size_t size, size_t number_of_element)
 {
     size_t number_of_byte = size * number_of_element;
     const uint8_t *nptr = (const uint8_t *)ptr;

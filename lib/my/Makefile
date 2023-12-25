@@ -73,6 +73,8 @@ TEST_FONC	=	tests/test_my_putchar.c				\
 				tests/test_my_memset.c				\
 				tests/test_my_put_nbr.c
 
+TEST_OBJ	=	$(TEST_FONC:%.c=%.o)
+
 TESTS_FLAGS	=	--coverage -lcriterion -I./include
 
 OBJ		=	$(SRC:%.c=%.o)
@@ -102,18 +104,17 @@ all:	$(NAME)
 		@$(CP) include/my.h ../../include/my.h
 
 tclean:
-		@$(RM) tests/*.gcda
-		@$(RM) tests/*.gcno
-		@$(RM) *.gcda
-		@$(RM) *.gcno
+		@$(RM) **/*.gcda
+		@$(RM) **/*.gcno
 		@$(RM) $(TEST_BINARY)
 
-tests_run:		tclean
-		@$(CC) $(SRC) $(TEST_FONC) $(TESTS_FLAGS) $(LFLAGS) -o $(TEST_BINARY)
+tests_run:		tclean $(TEST_OBJ)
+		@$(CC) $(SRC) $(TEST_OBJ) $(TESTS_FLAGS) $(LFLAGS) -o $(TEST_BINARY)
 		./$(TEST_BINARY)
 		# ./$(TEST_BINARY) --xml=tests/coverage.xml
 		@printf "\033[32m[Message]\033[39m Compilation de tests réussi !\n"
-		mv *.gc* tests
+		mv *.gcno fonctions
+		mv *.gcda fonctions
 		gcovr -e tests
 		gcovr -e tests -bu
 
