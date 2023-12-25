@@ -1,5 +1,7 @@
 # lib C ursed
 
+[![codecov](https://codecov.io/gh/Miou-zora/lib-C-ursed/graph/badge.svg?token=RZDPCBU2NR)](https://codecov.io/gh/Miou-zora/lib-C-ursed)
+
 The goal of this project is to try to reach limit of ternary and recursive functions of the libmy (Epitech Small C Pool LibC).
 
 If possible, this Lib C allows anyone who doesn't like Coding Style to do as they see fit.
