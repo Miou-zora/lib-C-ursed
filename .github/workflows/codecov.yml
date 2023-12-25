@@ -23,7 +23,6 @@ jobs:
         uses: codecov/codecov-action@v3
         with:
           working-directory: ./lib/my
-          ignore: "tests/*"
           gcov: true
           token: ${{ secrets.CODECOV_TOKEN }}
 
