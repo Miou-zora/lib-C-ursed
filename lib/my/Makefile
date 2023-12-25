@@ -102,10 +102,8 @@ all:	$(NAME)
 		@$(CP) include/my.h ../../include/my.h
 
 tclean:
-		@$(RM) tests/*.gcda
-		@$(RM) tests/*.gcno
-		@$(RM) *.gcda
-		@$(RM) *.gcno
+		@$(RM) **/*.gcda
+		@$(RM) **/*.gcno
 		@$(RM) $(TEST_BINARY)
 
 tests_run:		tclean
@@ -113,7 +111,7 @@ tests_run:		tclean
 		./$(TEST_BINARY)
 		# ./$(TEST_BINARY) --xml=tests/coverage.xml
 		@printf "\033[32m[Message]\033[39m Compilation de tests réussi !\n"
-		mv *.gc* tests
+		mv *.gc* fonctions
 		gcovr -e tests
 		gcovr -e tests -bu
 
