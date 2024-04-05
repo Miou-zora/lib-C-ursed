@@ -28,7 +28,7 @@ Created        | Tested         | Name
 :green_square: | :green_square: | my_memset
 :green_square: | :green_square: | my_min
 :red_square:   | :red_square:   | my_printf
-:red_square:   | :red_square:   | my_put_nbr
+:red_square:   | :green_square: | my_put_nbr
 :green_square: | :green_square: | my_putchar
 :green_square: | :green_square: | my_putstr
 :red_square:   | :red_square:   | my_revstr
