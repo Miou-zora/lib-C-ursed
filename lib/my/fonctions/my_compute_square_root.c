@@ -6,15 +6,20 @@
 ** of the number given as argument.
 */
 
-int *get_square_root(int *para)
+int get_square_root(int para[2])
 {
-    return ((para[0] * para[0] > para[1]) ?
-    (int[]){para[0] - 1, para[1]} : (para[0] * para[0] == para[1]) ?
-    para : get_square_root((int[]){para[0] + 1, para[1]}));
+    return (
+    (para[0] * para[0] > para[1]) ?
+        para[0] - 1
+    : (para[0] * para[0] == para[1]) ?
+        para[0]
+    : get_square_root((int[]){para[0] + 1, para[1]}));
 }
 
 int my_compute_square_root(int nb)
-{
-    return ((nb < 0) ?
-    -1 : get_square_root((int[]){0, nb})[0]);
+{ 
+    return (
+    (nb < 0) ?
+        -1
+    : get_square_root((int[]){0, nb}));
 }

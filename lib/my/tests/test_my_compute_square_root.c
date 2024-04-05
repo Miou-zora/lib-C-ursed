@@ -33,3 +33,11 @@ Test(my_compute_square_root, neg)
 
     cr_assert(result == expected);
 }
+
+Test(my_compute_square_root, not_a_power)
+{
+    int result = my_compute_square_root(15);
+    int expected = 3;
+
+    cr_assert(result == expected);
+}
