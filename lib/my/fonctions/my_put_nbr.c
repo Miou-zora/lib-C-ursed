@@ -27,12 +27,16 @@ char *fill_str(char *nbr_to_print, long long nbr) {
     : nbr_to_print);
 }
 
-int my_put_nbr(long long nbr)
+static
+int r1_my_put_nbr(long long nbr, char nbr_to_print[23])
 {
-    char nbr_to_print[23] = {0};
-
     return (
     (nbr == 0) ?
         (my_putchar('0'))
     : (my_putstr(my_revstr(((long)fill_str(nbr_to_print + ((nbr < 0) ? nbr_to_print[get_nbrlen(nbr)] = '-' : 0) * 0 , nbr)) * 0 + nbr_to_print))));
+}
+
+int my_put_nbr(long long nbr)
+{
+    return (r1_my_put_nbr(nbr, (char[23]){0}));
 }
