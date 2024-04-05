@@ -12,4 +12,7 @@ include/my.h
 *.gcno
 *.gcda
 coverage.xml
-unit_tests
+**/unit_tests
+
+# Default project binary
+temp_name
