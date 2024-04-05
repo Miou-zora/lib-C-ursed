@@ -2,18 +2,16 @@
 ** EPITECH PROJECT, 2021
 ** my_put_nbr.c
 ** File description:
-** A function who print a number.
+** A function that print a number.
 */
 
 #include <stdbool.h>
 
 int my_putchar(char c);
-
 int my_putstr(char const *str);
 char *my_revstr(char *str);
 int my_abs(int x);
 unsigned int get_nbrlen(long long nb);
-
 
 static
 char modulo(long long a, long long b)
@@ -28,8 +26,6 @@ char *fill_str(char *nbr_to_print, long long nbr) {
         fill_str(((*nbr_to_print) = my_abs(modulo(nbr, 10)) + '0') * 0 + nbr_to_print + 1, nbr / 10)
     : nbr_to_print);
 }
-
-static r1_my_put_nbr()
 
 int my_put_nbr(long long nbr)
 {
