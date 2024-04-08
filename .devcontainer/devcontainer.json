@@ -3,5 +3,6 @@
   "features": {
     "ghcr.io/devcontainers/features/nix:1": {},
     "ghcr.io/devcontainers-contrib/features/direnv:1": {}
-  }
+  },
+  "postStartCommand": "zsh && eval \"$(direnv hook zsh)\" && direnv allow ."
 }
