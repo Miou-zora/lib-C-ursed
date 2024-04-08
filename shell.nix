@@ -9,5 +9,6 @@ pkgs.mkShell {
 
     shellHook = ''
         export CC=gcc
+        alias 'c'='clear ; ls'
     '';
 }
