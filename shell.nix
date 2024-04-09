@@ -9,7 +9,7 @@ pkgs.mkShell {
 
     shellHook = ''
         export CC=gcc
-        echo "alias 'c'='clear ; ls'" >> ~/.zshrc
-        echo "alias 'mlt'='make lib_tests_run'" >> ~/.zshrc
+        alias c='clear ; ls'
+        alias mlt='make lib_tests_run'
     '';
 }
