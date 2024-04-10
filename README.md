@@ -31,7 +31,7 @@ Created        | Tested         | Name
 :red_square:   | :green_square: | my_put_nbr
 :green_square: | :green_square: | my_putchar
 :green_square: | :green_square: | my_putstr
-:red_square:   | :red_square:   | my_revstr
+:green_square: | :green_square: | my_revstr
 :red_square:   | :red_square:   | my_showmem (to create)
 :red_square:   | :red_square:   | my_showstr (to create)
 :red_square:   | :red_square:   | my_sort_int_array

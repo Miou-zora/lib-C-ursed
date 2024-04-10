@@ -10,14 +10,20 @@
 
 int my_printf(char const *str, ...);
 
-int r1_my_strlen(char const *str, int index)
+long r1_my_strlen(char const *str)
 {
-    return (str[index] == '\0') ?
-    index : r1_my_strlen(str, index + 1);
+    return
+    (*str == '\0') ?
+        0
+    :
+        1 + r1_my_strlen(str+1);
 }
 
-int my_strlen(char const *str)
+long my_strlen(char const *str)
 {
-    return (str == NULL) ?
-    0 : r1_my_strlen(str, 0);
+    return
+    (str == NULL) ?
+        0
+    :
+        r1_my_strlen(str);
 }

@@ -4,5 +4,10 @@
     "ghcr.io/devcontainers/features/nix:1": {},
     "ghcr.io/christophermacgown/devcontainer-features/direnv:1": {}
   },
-  "postStartCommand": "direnv allow $CODESPACE_VSCODE_FOLDER ; alias c='clear && ls' ; alias mlt='make lib_tests_run' ; alias mtl='make lib_tests_run'"
+  // "postAttachCommand": [
+  //   "echo \\\"alias c='clear ; ls'\\\" >> ~/.bashrc",
+  //   "echo \\\"alias c='clear ; ls'\\\" >> ~/.zshrc",
+  //   "alias c='clear ; ls'",
+  //   "direnv allow"
+  // ]
 }
