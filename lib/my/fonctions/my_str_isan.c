@@ -7,16 +7,22 @@
 ** contains another type of character.
 */
 
-int my_str_isan(char const *str)
+#include <stdbool.h>
+
+#include "my.h"
+
+static __attribute__((const))
+bool char_isalpha(char c)
 {
-    if (!str[0])
-        return (1);
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (!((str[i] >= 'a' && str[i] <= 'z') ||
-        (str[i] >= 'A' && str[i] <= 'Z') ||
-        (str[i] >= '0' && str[i] <= '9'))) {
-            return (0);
-        }
-    }
-    return (1);
+    return (char_islower(c) || char_isupper(c) || char_isnum(c));
+}
+
+__attribute__((const))
+bool my_str_isan(char const *str)
+{
+    return
+    (str == (char *)0) ?
+        false
+    :
+        my_str_is(str, char_isalpha);
 }

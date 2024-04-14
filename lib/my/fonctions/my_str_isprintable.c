@@ -6,14 +6,22 @@
 ** contains printable characters and 0 otherwise.
 */
 
-int my_str_isprintable(char const *str)
+#include <stdbool.h>
+
+#include "my.h"
+
+__attribute__((const))
+bool char_isprintable(char c)
 {
-    if (!str[0])
-        return (1);
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (!(str[i] >= 32 && str[i] <= 126)) {
-            return (0);
-        }
-    }
-    return (1);
+    return (((unsigned char)(c - 32)) <= 126 - 32);
+}
+
+__attribute__((const))
+bool my_str_isprintable(char const *str)
+{
+    return
+    (str == (char *)0) ?
+        false
+    :
+        my_str_is(str, char_isupper);
 }

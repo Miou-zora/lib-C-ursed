@@ -28,23 +28,23 @@ Created        | Tested         | Name
 :green_square: | :green_square: | my_memset
 :green_square: | :green_square: | my_min
 :red_square:   | :red_square:   | my_printf
-:red_square:   | :green_square: | my_put_nbr
+:green_square: | :green_square: | my_put_nbr
 :green_square: | :green_square: | my_putchar
 :green_square: | :green_square: | my_putstr
 :green_square: | :green_square: | my_revstr
 :red_square:   | :red_square:   | my_showmem (to create)
 :red_square:   | :red_square:   | my_showstr (to create)
 :red_square:   | :red_square:   | my_sort_int_array
-:red_square:   | :red_square:   | my_str_isalpha
-:red_square:   | :red_square:   | my_str_isan
-:red_square:   | :red_square:   | my_str_islower
-:red_square:   | :red_square:   | my_str_isnum
-:red_square:   | :red_square:   | my_str_isprintable
-:red_square:   | :red_square:   | my_str_isupper
+:green_square: | :green_square: | my_str_isalpha
+:green_square: | :green_square: | my_str_isan
+:green_square: | :red_square:   | my_str_islower
+:green_square: | :red_square:   | my_str_isnum
+:green_square: | :red_square:   | my_str_isprintable
+:green_square: | :red_square:   | my_str_isupper
 :red_square:   | :red_square:   | my_str_without_char_array
 :red_square:   | :red_square:   | my_str_without_space
 :red_square:   | :red_square:   | my_strcapitalize
-:red_square:   | :red_square:   | my_strcat
+:green_square: | :red_square:   | my_strcat
 :red_square:   | :red_square:   | my_strcmp
 :red_square:   | :red_square:   | my_strcpy
 :red_square:   | :red_square:   | my_strdup

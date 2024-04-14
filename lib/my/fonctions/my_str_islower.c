@@ -6,14 +6,22 @@
 ** contains lowercase alphabetical characters and 0 otherwise.
 */
 
-int my_str_islower(char const *str)
+#include <stdbool.h>
+
+#include "my.h"
+
+__attribute__((const))
+bool char_islower(char c)
 {
-    if (!str[0])
-        return (1);
-    for (int i = 0; str[i] != '\0'; i++) {
-        if (!(str[i] >= 'a' && str[i] <= 'z')) {
-            return (0);
-        }
-    }
-    return (1);
+    return ((((unsigned char)(c - 'a')) <= 'z' - 'a'));
+}
+
+__attribute__((const))
+bool my_str_islower(char const *str)
+{
+    return
+    (str == (char *)0) ?
+        false
+    :
+        my_str_is(str, char_islower);
 }

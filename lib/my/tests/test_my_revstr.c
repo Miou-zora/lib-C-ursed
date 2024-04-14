@@ -22,7 +22,6 @@ Test(my_revstr, casual_pair)
     char str[] = "abcd";
     char *result = my_revstr(str);
     char expected[] = "dcba";
-    printf("result: %c%c%c%c\n", result[0], result[1], result[2], result[3]);
     cr_assert_str_eq(result, expected);
 }
 

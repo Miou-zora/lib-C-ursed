@@ -5,15 +5,16 @@
 ** A function that concatenates two strings.
 */
 
-int my_strlen(char *);
+#include <stddef.h>
 
-char *my_strcat(char *dest, char *src)
+#include "my.h"
+
+__attribute__((const))
+char *my_strcat(char *dest, char const *src)
 {
-    int dest_len = my_strlen(dest);
-    int i = 0;
-
-    for (; src[i]; i++)
-        dest[dest_len + i] = src[i];
-    dest[dest_len + i] = '\0';
-    return dest;
+    return
+    (dest == (char *)0 || src == (char *)0) ?
+        (char *)0
+    :
+        dest + (long int)my_strcpy(dest + my_strlen(dest), src) * 0;
 }
