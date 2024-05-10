@@ -52,22 +52,23 @@ char *r2_convert_base(long long number, char *base, int blen, char *new_base, si
 
 char *r1_convert_base(long long number, char *base, int blen, char *new_base)
 {
-    return (
-    (new_base == NULL) ?
+    return
+    new_base == NULL ?
         NULL
     :
-        my_revstr(r2_convert_base(number, base, blen, new_base, 0)));
+        my_revstr(r2_convert_base(number, base, blen, new_base, 0));
 }
 
 char *i1_convert_base(long long number, char *base, int blen)
 {
-    return (r1_convert_base(number, base, blen, my_calloc(get_nblen(number, blen) + 1, sizeof(char *))));
+    return
+    r1_convert_base(number, base, blen, my_calloc(get_nblen(number, blen) + 1, sizeof(char *)));
 }
 
 char *convert_base(long long number, char *base)
 {
     return (
-    (base == NULL) ?
+    base == NULL ?
         NULL
     :
         i1_convert_base(number, base, my_strlen(base)));
@@ -75,17 +76,17 @@ char *convert_base(long long number, char *base)
 
 char *r1_convert_octa_set_str(char *str, int nbr)
 {
-    return (
-    (str == NULL) ?
+    return
+    str == NULL ?
         NULL
-    : (nbr <= 0) ?
+    : nbr <= 0 ?
         str
     : (str[my_strlen(str)] = nbr % 8 + '0') ?
-        ((nbr = nbr / 8) != 0) ?
+        (nbr = nbr / 8) != 0 ?
             r1_convert_octa_set_str(str, nbr)
         :
             str
-    : str);
+    : str;
 }
 
 char *convert_octa(int nbr)
