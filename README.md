@@ -44,8 +44,8 @@ Created        | Tested         | Name
 :red_square:   | :red_square:   | my_str_without_char_array
 :red_square:   | :red_square:   | my_str_without_space
 :red_square:   | :red_square:   | my_strcapitalize
-:green_square: | :red_square:   | my_strcat
-:red_square:   | :red_square:   | my_strcmp
+:green_square: | :green_square: | my_strcat
+:green_square: | :green_square: | my_strcmp
 :green_square: | :green_square: | my_strcpy
 :green_square: | :red_square:   | my_strdup
 :green_square: | :green_square: | my_strlen
