@@ -46,15 +46,15 @@ Created        | Tested         | Name
 :red_square:   | :red_square:   | my_strcapitalize
 :green_square: | :red_square:   | my_strcat
 :red_square:   | :red_square:   | my_strcmp
-:red_square:   | :red_square:   | my_strcpy
-:red_square:   | :red_square:   | my_strdup
+:green_square: | :green_square: | my_strcpy
+:green_square: | :red_square:   | my_strdup
 :green_square: | :green_square: | my_strlen
 :red_square:   | :red_square:   | my_strlowcase
 :red_square:   | :red_square:   | my_strncat
 :red_square:   | :red_square:   | my_strncmp
 :red_square:   | :red_square:   | my_strncpy
 :red_square:   | :red_square:   | my_strstr
-:red_square:   | :red_square:   | my_strupcase
+:green_square: | :green_square: | my_strupcase
 :red_square:   | :red_square:   | my_swap
 :red_square:   | :red_square:   | myf_putbase
 
