@@ -61,7 +61,6 @@ char **data_to_array_str(char *str, char *sep);
 unsigned int get_len_array(void *array);
 bool is_char_is_that(char c, char const *array);
 unsigned int number_of_word_start(char const *str, char *sep);
-bool function_for_void_function(void(*function)(void *), void *its_a_trap);
 char *convert_octa(int nbr);
 int print_error_and_return(const char *error);
 
