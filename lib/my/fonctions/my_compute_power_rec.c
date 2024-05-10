@@ -8,7 +8,11 @@
 
 float my_compute_power_rec(float nb , int power)
 {
-    return ((power == 0) ?
-    1 : (power > 0) ?
-    (nb * my_compute_power_rec(nb, power - 1)) : (((1.f / nb) * my_compute_power_rec(nb, power + 1))));
+    return (
+    (power == 0) ?
+        1
+    : (power > 0) ?
+        nb * my_compute_power_rec(nb, power - 1)
+    :
+        (1.f / nb) * my_compute_power_rec(nb, power + 1));
 }

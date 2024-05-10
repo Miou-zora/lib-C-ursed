@@ -13,14 +13,15 @@
 __attribute__((const))
 bool char_islower(char c)
 {
-    return ((((unsigned char)(c - 'a')) <= 'z' - 'a'));
+    return
+    (unsigned char)(c - 'a') <= 'z' - 'a';
 }
 
 __attribute__((const))
 bool my_str_islower(char const *str)
 {
     return
-    (str == (char *)0) ?
+    str == (char *)0 ?
         false
     :
         my_str_is(str, char_islower);

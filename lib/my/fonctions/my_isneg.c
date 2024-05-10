@@ -10,6 +10,5 @@
 
 bool my_isneg(int n)
 {
-    return (n >= 0) ?
-    false : true;
+    return n < 0;
 }

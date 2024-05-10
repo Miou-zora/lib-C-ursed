@@ -11,5 +11,9 @@ int my_is_prime(int);
 
 unsigned int my_find_prime_sup(unsigned int nb)
 {
-    return ((my_is_prime(nb) != 0) ? nb : my_find_prime_sup(nb + 1));
+    return (
+    (my_is_prime(nb) != 0) ?
+        nb
+    :
+        my_find_prime_sup(nb + 1));
 }

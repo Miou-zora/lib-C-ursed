@@ -11,5 +11,6 @@ int my_strlen(const char *str);
 
 int print_error_and_return(const char *error)
 {
-    return (write(2, error, my_strlen(error)));
+    return
+    write(2, error, my_strlen(error));
 }

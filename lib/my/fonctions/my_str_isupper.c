@@ -13,14 +13,15 @@
 __attribute__((const))
 bool char_isupper(char c)
 {
-    return (((unsigned char)(c - 'A')) <= 'Z' - 'A');
+    return
+    (unsigned char)(c - 'A') <= 'Z' - 'A';
 }
 
 __attribute__((const))
 bool my_str_isupper(char const *str)
 {
     return
-    (str == (char *)0) ?
+    str == (char *)0 ?
         false
     :
         my_str_is(str, char_isupper);

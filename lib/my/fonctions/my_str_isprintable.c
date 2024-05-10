@@ -13,14 +13,15 @@
 __attribute__((const))
 bool char_isprintable(char c)
 {
-    return (((unsigned char)(c - 32)) <= 126 - 32);
+    return
+    (unsigned char)(c - 32) <= 126 - 32;
 }
 
 __attribute__((const))
 bool my_str_isprintable(char const *str)
 {
     return
-    (str == (char *)0) ?
+    str == (char *)0 ?
         false
     :
         my_str_is(str, char_isupper);

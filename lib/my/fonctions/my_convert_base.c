@@ -16,11 +16,16 @@ int my_printf(char const *str, ...);
 
 int *r1_get_nblen(int *para)
 {
-    return ((!para[1] || para[1] == 1) ?
+    return (
+    (!para[1] || para[1] == 1) ?
         ((para[2] = 0) == 0) ?
-        para : para :
-    (!para[0]) ?
-    para : r1_get_nblen((int[]){para[0] / para[1], para[1], para[2] + 1}));
+            para
+        :
+            para
+    : (!para[0]) ?
+        para
+    :
+        r1_get_nblen((int[]){para[0] / para[1], para[1], para[2] + 1}));
 }
 
 int get_nblen(int number, int blen)
@@ -35,16 +40,23 @@ char *r2_convert_base(long long number, char *base, int blen, char *new_base, si
         number = number / blen;
     }
     return ((number == 0) ?
-    new_base : ((new_base[i] = base[number % blen]) || 1) ?
+        new_base
+    : ((new_base[i] = base[number % blen]) || 1) ?
         ((number = number / blen) == 0 && (i = i + 1) != 0) ?
-        new_base : r2_convert_base(number, base, blen, new_base, i)
-    : NULL);
+            new_base
+        :
+            r2_convert_base(number, base, blen, new_base, i)
+    :
+        NULL);
 }
 
 char *r1_convert_base(long long number, char *base, int blen, char *new_base)
 {
-    return ((new_base == NULL) ?
-    NULL : my_revstr(r2_convert_base(number, base, blen, new_base, 0)));
+    return (
+    (new_base == NULL) ?
+        NULL
+    :
+        my_revstr(r2_convert_base(number, base, blen, new_base, 0)));
 }
 
 char *i1_convert_base(long long number, char *base, int blen)
@@ -54,30 +66,27 @@ char *i1_convert_base(long long number, char *base, int blen)
 
 char *convert_base(long long number, char *base)
 {
-    return ((base == NULL) ?
-    NULL : i1_convert_base(number, base, my_strlen(base)));
+    return (
+    (base == NULL) ?
+        NULL
+    :
+        i1_convert_base(number, base, my_strlen(base)));
 }
-
-// char *m1_convert_octa_set_str(char *str)
-// {
-//     return ((str == NULL) ?
-//     NULL : ((str[0] = '0') != '0') ?
-//     NULL : ((str[1] = '0') != '0') ?
-//     NULL : ((str[2] = '0') != '0') ?
-//     NULL : str);
-// }
 
 char *r1_convert_octa_set_str(char *str, int nbr)
 {
-    return ((str == NULL) ?
-    NULL : (nbr <= 0) ?
-    str : (str[my_strlen(str)] = nbr % 8 + '0') ?
-    ((nbr = nbr / 8) != 0) ?
-        r1_convert_octa_set_str(str, nbr) : str
+    return (
+    (str == NULL) ?
+        NULL
+    : (nbr <= 0) ?
+        str
+    : (str[my_strlen(str)] = nbr % 8 + '0') ?
+        ((nbr = nbr / 8) != 0) ?
+            r1_convert_octa_set_str(str, nbr)
+        :
+            str
     : str);
 }
-
-// char
 
 char *convert_octa(int nbr)
 {

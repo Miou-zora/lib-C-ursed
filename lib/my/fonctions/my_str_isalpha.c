@@ -14,14 +14,15 @@
 static __attribute__((const))
 bool char_isalpha(char c)
 {
-    return (char_islower(c) || char_isupper(c));
+    return
+    char_islower(c) || char_isupper(c);
 }
 
 __attribute__((const))
 bool my_str_isalpha(char const *str)
 {
     return
-    (str == (char *)0) ?
+    str == (char *)0 ?
         false
     :
         my_str_is(str, char_isalpha);

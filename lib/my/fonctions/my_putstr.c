@@ -12,8 +12,11 @@ int print_error_and_return(const char *error);
 
 int my_putstr(char const *str)
 {
-    return ((str == NULL) ?
-    0 : (*str == 0) ?
-    0 : write(1, str, my_strlen(str)) == -1 ?
-    84 : 0);
+    return
+    str == NULL || *str == 0 ?
+        0
+    : write(1, str, my_strlen(str)) == -1 ?
+        84
+    :
+        0;
 }

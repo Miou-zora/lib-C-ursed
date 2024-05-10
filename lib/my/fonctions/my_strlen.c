@@ -13,7 +13,7 @@ int my_printf(char const *str, ...);
 long r1_my_strlen(char const *str)
 {
     return
-    (*str == '\0') ?
+    *str == '\0' ?
         0
     :
         1 + r1_my_strlen(str+1);
@@ -22,7 +22,7 @@ long r1_my_strlen(char const *str)
 long my_strlen(char const *str)
 {
     return
-    (str == NULL) ?
+    str == NULL ?
         0
     :
         r1_my_strlen(str);
