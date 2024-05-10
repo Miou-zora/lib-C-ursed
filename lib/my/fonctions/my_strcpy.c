@@ -5,12 +5,21 @@
 ** A function that copies a string into another.
 */
 
+static
+char *r1_my_strcpy(char *dest , char const *src)
+{
+    return
+    *src ?
+        (long)r1_my_strcpy(dest + 1, src + 1) * (*dest = *src) * 0 + dest
+    :
+        0;
+}
+// There is maybe a way to it a lot faster (x4 or x8) by casting char * to long * but I don't know how to do it. :3
 char *my_strcpy(char *dest , char const *src)
 {
-    int i = 0;
-
-    for (; src[i]; i++)
-        dest[i] = src[i];
-    dest[i] = '\0';
-    return (dest);
+    return
+    !src ?
+        dest
+    :
+        r1_my_strcpy(dest, src);
 }

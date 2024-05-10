@@ -14,13 +14,16 @@ void *my_calloc(int elem_count, int elem_size);
 
 int my_strlen(char const *str);
 
+char *r1_my_strdup(char const *src, char *return_value) {
+    return 
+    (return_value = my_calloc(my_strlen(src) + 1, sizeof(*return_value))) == NULL ?
+        NULL
+    :
+        my_strcpy(return_value, src);
+}
+
 char *my_strdup(char const *src)
 {
-    char *new = my_calloc(my_strlen(src) + 1, sizeof(*new));
-
-    if (new == NULL) {
-        return (NULL);
-    }
-    new = my_strcpy(new, src);
-    return (new);
+    return
+    r1_my_strdup(src, NULL);
 }
