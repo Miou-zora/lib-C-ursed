@@ -13,7 +13,8 @@ int get_square_root(int para[2])
         para[0] - 1
     : (para[0] * para[0] == para[1]) ?
         para[0]
-    : get_square_root((int[]){para[0] + 1, para[1]}));
+    :
+        get_square_root((int[]){para[0] + 1, para[1]}));
 }
 
 int my_compute_square_root(int nb)
@@ -21,5 +22,6 @@ int my_compute_square_root(int nb)
     return (
     (nb < 0) ?
         -1
-    : get_square_root((int[]){0, nb}));
+    :
+        get_square_root((int[]){0, nb}));
 }
