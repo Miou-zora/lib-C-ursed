@@ -78,3 +78,9 @@ bool char_isnum(char c);
 
 __attribute__((const))
 bool char_isprintable(char c);
+
+__attribute__((const))
+bool char_isalpha(char c);
+
+__attribute__((const))
+bool char_isan(char c);

@@ -11,7 +11,7 @@
 
 #include "my.h"
 
-static __attribute__((const))
+__attribute__((const))
 bool char_isalpha(char c)
 {
     return

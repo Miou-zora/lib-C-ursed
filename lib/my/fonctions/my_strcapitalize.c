@@ -5,42 +5,48 @@
 ** A function that capitalizes the first letter of each word.
 */
 
-int char_l(char c)
-{
-    if (c >= 'a' && c <= 'z')
-        return (1);
-    return (0);
-}
+#include <stdbool.h>
 
-int char_u(char c)
-{
-    if (c >= 'A' && c <= 'Z')
-        return (1);
-    return (0);
-}
+__attribute__((const))
+bool char_isupper(char c);
+__attribute__((const))
+bool char_islower(char c);
+__attribute__((const))
+bool char_isupper(char c);
+__attribute__((const))
+bool char_isnum(char c);
+__attribute__((const))
+bool char_isan(char c);
+__attribute__((const))
+bool char_isalpha(char c);
 
-int char_n(char c)
-{
-    if (c >= '0' && c <= '9')
-        return (1);
-    return (0);
-}
 
-char char_an(char c)
+char *r1_my_strcapitalize(char *str)
 {
-    if (char_l(c) || char_u(c) || char_n(c))
-        return (1);
-    return (0);
+    return
+    *str && *(str - 1) ?
+        char_isalpha(*(str - 1)) ?
+            char_isupper(*str) && char_isupper(*(str - 1)) ?
+                (*str += 'a' - 'A') * 0 + r1_my_strcapitalize(str + 1) - 1
+            : char_islower(*(str - 1)) && char_isupper(*str) ?
+                (*str += 'a' - 'A') * 0 + r1_my_strcapitalize(str + 1) - 1
+            :
+                r1_my_strcapitalize(str + 1) - 1
+        : char_islower(*str) ?
+            (*str -= 'a' - 'A') * 0 + r1_my_strcapitalize(str + 1) - 1
+        :
+            r1_my_strcapitalize(str + 1) - 1
+    :
+        str;
 }
 
 char *my_strcapitalize(char *str)
 {
-    for (int i = 0; str[i]; i++) {
-        char d = str[i - 1];
-        if ((!d && char_l(str[i])) || (!char_an(d) && char_l(str[i])))
-            str[i] -= 32;
-        else if ((char_l(d) || char_n(d)) && char_u(str[i]))
-            str[i] += 32;
-    }
-    return (str);
+    return
+    !str ?
+        str
+    : char_islower(str[0]) ?
+        (str[0] -= 'a' - 'A') * 0 + r1_my_strcapitalize(str + 1) - 1
+    :
+        r1_my_strcapitalize(str + 1) - 1;
 }

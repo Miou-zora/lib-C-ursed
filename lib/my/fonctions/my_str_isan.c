@@ -11,8 +11,8 @@
 
 #include "my.h"
 
-static __attribute__((const))
-bool char_isalpha(char c)
+__attribute__((const))
+bool char_isan(char c)
 {
     return
     char_islower(c) || char_isupper(c) || char_isnum(c);
@@ -25,5 +25,5 @@ bool my_str_isan(char const *str)
     str == (char *)0 ?
         false
     :
-        my_str_is(str, char_isalpha);
+        my_str_is(str, char_isan);
 }

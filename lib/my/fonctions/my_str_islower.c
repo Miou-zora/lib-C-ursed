@@ -14,7 +14,7 @@ __attribute__((const))
 bool char_islower(char c)
 {
     return
-    (unsigned char)(c - 'a') <= 'z' - 'a';
+    (unsigned char)(c - 'a') <= ('z' - 'a');
 }
 
 __attribute__((const))
