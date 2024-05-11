@@ -43,13 +43,13 @@ Created        | Tested         | Name
 :green_square: | :red_square:   | my_str_isupper
 :red_square:   | :red_square:   | my_str_without_char_array
 :red_square:   | :red_square:   | my_str_without_space
-:red_square:   | :red_square:   | my_strcapitalize
+:green_square: | :green_square: | my_strcapitalize
 :green_square: | :green_square: | my_strcat
 :green_square: | :green_square: | my_strcmp
 :green_square: | :green_square: | my_strcpy
 :green_square: | :red_square:   | my_strdup
 :green_square: | :green_square: | my_strlen
-:red_square:   | :red_square:   | my_strlowcase
+:green_square: | :green_square: | my_strlowcase
 :red_square:   | :red_square:   | my_strncat
 :red_square:   | :red_square:   | my_strncmp
 :red_square:   | :red_square:   | my_strncpy
