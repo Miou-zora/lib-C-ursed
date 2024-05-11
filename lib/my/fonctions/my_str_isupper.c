@@ -21,7 +21,7 @@ __attribute__((const))
 bool my_str_isupper(char const *str)
 {
     return
-    str == (char *)0 ?
+    !str ?
         false
     :
         my_str_is(str, char_isupper);

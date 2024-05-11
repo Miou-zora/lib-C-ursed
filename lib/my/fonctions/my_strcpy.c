@@ -18,7 +18,7 @@ char *r1_my_strcpy(char *dest , char const *src)
 char *my_strcpy(char *dest , char const *src)
 {
     return
-    src == (char *)0 ?
+    !src ?
         dest
     :
         r1_my_strcpy(dest, src);

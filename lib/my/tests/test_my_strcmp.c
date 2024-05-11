@@ -36,7 +36,6 @@ Test(my_strcmp, first_longer)
     char s2[] = "ab";
     int result = my_strcmp(s1, s2);
     int expected = strcmp(s1, s2);
-    printf("%i %i\n", result, expected);
     cr_assert_eq(result, expected);
 }
 
@@ -46,6 +45,5 @@ Test(my_strcmp, second_longer)
     char s2[] = "abc";
     int result = my_strcmp(s1, s2);
     int expected = strcmp(s1, s2);
-    printf("%i %i\n", result, expected);
     cr_assert_eq(result, expected);
 }

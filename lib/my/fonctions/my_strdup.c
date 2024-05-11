@@ -9,9 +9,7 @@
 #include <stdlib.h>
 
 char *my_strcpy(char *dest , char const *src);
-
 void *my_calloc(int elem_count, int elem_size);
-
 int my_strlen(char const *str);
 
 char *r1_my_strdup(char const *src, char *return_value) {
