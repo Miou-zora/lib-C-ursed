@@ -26,9 +26,8 @@ char *r1_my_strcapitalize(char *str)
     return
     *str && *(str - 1) ?
         char_isalpha(*(str - 1)) ?
-            char_isupper(*str) && char_isupper(*(str - 1)) ?
-                (*str += 'a' - 'A') * 0 + r1_my_strcapitalize(str + 1) - 1
-            : char_islower(*(str - 1)) && char_isupper(*str) ?
+            (char_isupper(*str) && char_isupper(*(str - 1))) ||
+            (char_islower(*(str - 1)) && char_isupper(*str))  ?
                 (*str += 'a' - 'A') * 0 + r1_my_strcapitalize(str + 1) - 1
             :
                 r1_my_strcapitalize(str + 1) - 1
