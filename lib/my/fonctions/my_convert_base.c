@@ -33,7 +33,7 @@ int get_nblen(int number, int blen)
     return (r1_get_nblen((int[]){number, blen, 1})[2]);
 }
 
-char *r2_convert_base(long long number, char *base, int blen, char *new_base, size_t i)
+char *r2_convert_base(long long number, const char *base, int blen, char *new_base, size_t i)
 {
     for (; number; i++) {
         new_base[i] = base[number % blen];
@@ -50,7 +50,7 @@ char *r2_convert_base(long long number, char *base, int blen, char *new_base, si
         NULL);
 }
 
-char *r1_convert_base(long long number, char *base, int blen, char *new_base)
+char *r1_convert_base(long long number, const char *base, int blen, char *new_base)
 {
     return
     new_base == NULL ?
@@ -59,13 +59,13 @@ char *r1_convert_base(long long number, char *base, int blen, char *new_base)
         my_revstr(r2_convert_base(number, base, blen, new_base, 0));
 }
 
-char *i1_convert_base(long long number, char *base, int blen)
+char *i1_convert_base(long long number, const char *base, int blen)
 {
     return
     r1_convert_base(number, base, blen, my_calloc(get_nblen(number, blen) + 1, sizeof(char *)));
 }
 
-char *convert_base(long long number, char *base)
+char *convert_base(long long number, const char *base)
 {
     return (
     base == NULL ?

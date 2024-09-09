@@ -8,11 +8,7 @@
 
 void my_putchar(char);
 
-void my_swap(int *a, int *b)
+int my_swap(int *a, int *b)
 {
-    int temp;
-
-    temp = *a;
-    *a = *b;
-    *b = temp;
+    return (*a ^= *b ^= *a ^= *b);
 }

@@ -9,7 +9,7 @@
 
 #include <stdbool.h>
 
-void my_swap(int *, int *);
+int my_swap(int *, int *);
 char *my_strupcase(char *);
 char *my_strstr(char *, char const *);
 char *my_strncpy(char *, char const *, int);
