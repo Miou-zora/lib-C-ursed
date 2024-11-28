@@ -50,7 +50,7 @@ Created        | Tested         | Name
 🟥 | 🟥 | my_strncat
 🟥 | 🟥 | my_strncmp
 🟥 | 🟥 | my_strncpy
-🟩 | 🟩 | my_strstr (special case: no ternary)
+🟩 | 🟩 | my_strstr (special case: no ternary, ptr on func, if, else, while, for recursive implementation)
 🟩 | 🟩 | my_strupcase
 🟩 | 🟥 | my_swap
 🟥 | 🟥 | myf_putbase

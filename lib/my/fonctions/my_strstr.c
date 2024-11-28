@@ -98,11 +98,6 @@
 char *r1_my_strstr(char *str , char *to_find, int size_of_to_find, char *is_str_valid);
 char *r2_my_strstr(char *str , char *to_find, int size_of_to_find, char *is_str_valid);
 
-char *return_str(char *str , char *, int, char *)
-{
-    return str - 1;
-};
-
 char *r2_my_strstr(char *str , char *to_find, int size_of_to_find, char *is_str_valid)
 {
     return (!my_strncmp(str, to_find, size_of_to_find) || (intptr_t)(is_str_valid = r1_my_strstr(str + 1, to_find, size_of_to_find, NULL)) * 0) * (intptr_t)str + is_str_valid;
