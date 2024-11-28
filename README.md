@@ -52,5 +52,5 @@ Created        | Tested         | Name
 🟥 | 🟥 | my_strncpy
 🟥 | 🟥 | my_strstr
 🟩 | 🟩 | my_strupcase
-🟥 | 🟥 | my_swap
+🟩 | 🟥 | my_swap
 🟥 | 🟥 | myf_putbase
