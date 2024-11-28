@@ -11,6 +11,9 @@ Test(my_strstr, casual)
     char str[] = "Hello World!";
     char to_find[] = "World";
 
+    printf("my_strstr: %s\n", my_strstr(str, to_find));
+    printf("strstr: %s\n", strstr(str, to_find));
+
     CHECK_SAME(str, to_find);
 }
 
