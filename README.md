@@ -8,49 +8,49 @@ It is still not recommended to use it for people who are not experienced in C, i
 
 Created        | Tested         | Name
 ---------------|----------------|-------
-:green_square: | :green_square: | data_to_array_str (partially)
-:green_square: | :green_square: | data_to_array_str (partially)
-:green_square: | :green_square: | get_nbrlen
-:green_square: | :green_square: | my_abs
-:green_square: | :green_square: | my_calloc
-:green_square: | :green_square: | my_compute_power_rec
-:green_square: | :green_square: | my_compute_square_root
-:red_square:   | :red_square:   | my_convert_base (partially)
-:green_square: | :green_square: | my_find_prime_sup
-:red_square:   | :red_square:   | my_fputthat
-:green_square: | :green_square: | my_getnbr (une pepite)
-:green_square: | :green_square: | my_is_prime
-:green_square: | :green_square: | my_isneg
-:green_square: | :green_square: | my_max
-:green_square: | :green_square: | my_memset
-:green_square: | :green_square: | my_min
-:red_square:   | :red_square:   | my_printf
-:green_square: | :green_square: | my_put_nbr
-:green_square: | :green_square: | my_putchar
-:green_square: | :green_square: | my_putstr
-:green_square: | :green_square: | my_revstr
-:red_square:   | :red_square:   | my_showmem (to create)
-:red_square:   | :red_square:   | my_showstr (to create)
-:red_square:   | :red_square:   | my_sort_int_array
-:green_square: | :green_square: | my_str_isalpha
-:green_square: | :green_square: | my_str_isan
-:green_square: | :red_square:   | my_str_islower
-:green_square: | :red_square:   | my_str_isnum
-:green_square: | :red_square:   | my_str_isprintable
-:green_square: | :red_square:   | my_str_isupper
-:red_square:   | :red_square:   | my_str_without_char_array
-:red_square:   | :red_square:   | my_str_without_space
-:green_square: | :green_square: | my_strcapitalize
-:green_square: | :green_square: | my_strcat
-:green_square: | :green_square: | my_strcmp
-:green_square: | :green_square: | my_strcpy
-:green_square: | :red_square:   | my_strdup
-:green_square: | :green_square: | my_strlen
-:green_square: | :green_square: | my_strlowcase
-:red_square:   | :red_square:   | my_strncat
-:red_square:   | :red_square:   | my_strncmp
-:red_square:   | :red_square:   | my_strncpy
-:red_square:   | :red_square:   | my_strstr
-:green_square: | :green_square: | my_strupcase
-:red_square:   | :red_square:   | my_swap
-:red_square:   | :red_square:   | myf_putbase
+🟩 | 🟩 | data_to_array_str (partially)
+🟩 | 🟩 | data_to_array_str (partially)
+🟩 | 🟩 | get_nbrlen
+🟩 | 🟩 | my_abs
+🟩 | 🟩 | my_calloc
+🟩 | 🟩 | my_compute_power_rec
+🟩 | 🟩 | my_compute_square_root
+🟥 | 🟥 | my_convert_base (partially)
+🟩 | 🟩 | my_find_prime_sup
+🟥 | 🟥 | my_fputthat
+🟩 | 🟩 | my_getnbr (une pepite)
+🟩 | 🟩 | my_is_prime
+🟩 | 🟩 | my_isneg
+🟩 | 🟩 | my_max
+🟩 | 🟩 | my_memset
+🟩 | 🟩 | my_min
+🟥 | 🟥 | my_printf
+🟩 | 🟩 | my_put_nbr
+🟩 | 🟩 | my_putchar
+🟩 | 🟩 | my_putstr
+🟩 | 🟩 | my_revstr
+🟥 | 🟥 | my_showmem (to create)
+🟥 | 🟥 | my_showstr (to create)
+🟥 | 🟥 | my_sort_int_array
+🟩 | 🟩 | my_str_isalpha
+🟩 | 🟩 | my_str_isan
+🟩 | 🟥 | my_str_islower
+🟩 | 🟥 | my_str_isnum
+🟩 | 🟥 | my_str_isprintable
+🟩 | 🟥 | my_str_isupper
+🟥 | 🟥 | my_str_without_char_array
+🟥 | 🟥 | my_str_without_space
+🟩 | 🟩 | my_strcapitalize
+🟩 | 🟩 | my_strcat
+🟩 | 🟩 | my_strcmp
+🟩 | 🟩 | my_strcpy
+🟩 | 🟥 | my_strdup
+🟩 | 🟩 | my_strlen
+🟩 | 🟩 | my_strlowcase
+🟥 | 🟥 | my_strncat
+🟥 | 🟥 | my_strncmp
+🟥 | 🟥 | my_strncpy
+🟥 | 🟥 | my_strstr
+🟩 | 🟩 | my_strupcase
+🟥 | 🟥 | my_swap
+🟥 | 🟥 | myf_putbase
