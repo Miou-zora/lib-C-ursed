@@ -7,19 +7,28 @@
 ** first occurrence in s1 of s2.
 */
 
-char *my_strstr(char *str , char const *to_find)
-{
-    int index;
-    int carac;
+#include <stdbool.h>
+#include <stddef.h>
 
-    for (index = 0; str[index] != '\0'; index++) {
-        carac = 0;
-        while (str[index + carac] == to_find[carac]) {
-            carac += 1;
-        }
-        if (to_find[carac] == '\0') {
-            return &str[index];
-        }
-    }
-    return ('\0');
+#include "my.h"
+
+static char *r1_my_strstr(char *str , char *to_find, int size_of_to_find)
+{
+    return
+    !*str ?
+        NULL
+    : my_strncmp(str, to_find, size_of_to_find) == 0 ?
+        str
+    :
+        r1_my_strstr(str + 1, to_find, size_of_to_find);
+}
+
+__attribute__((nonnull))
+char *my_strstr(char *str , char *to_find)
+{
+    return
+    !*to_find ?
+        str
+    :
+        r1_my_strstr(str, to_find, my_strlen(to_find));
 }

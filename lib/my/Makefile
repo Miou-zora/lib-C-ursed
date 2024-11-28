@@ -24,7 +24,7 @@ TEST_BINARY	=	unit_tests
 
 MV		=	mv
 
-CFLAGS	= 	-Wall -Wextra -Wshadow
+CFLAGS	= 	-Wall -Wextra -Wshadow -I./include
 
 MK			=	make -s
 

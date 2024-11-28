@@ -11,7 +11,8 @@
 
 int my_swap(int *, int *);
 char *my_strupcase(char *);
-char *my_strstr(char *, char const *);
+__attribute__((nonnull))
+char *my_strstr(char *, char *);
 char *my_strncpy(char *, char const *, int);
 int my_strncmp(char const *, char const *, int);
 char *my_strncat(char *, char const *, int);
