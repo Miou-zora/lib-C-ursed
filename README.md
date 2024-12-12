@@ -5,6 +5,25 @@ The goal of this project is to try to reach limit of ternary and recursive funct
 If possible, this Lib C allows anyone who doesn't like Coding Style to do as they see fit.
 It is still not recommended to use it for people who are not experienced in C, in ternary and recursive functions.
 
+## Example
+
+```c
+void *my_memset(void *ptr, unsigned long long data, unsigned long long size)
+{
+    return
+    (size--) ?
+        my_memset(ptr, (((char *)ptr)[size] = data), size)
+    :
+        ptr;
+}
+```
+As you can see, the function is written in a single line, with a ternary operator and a recursive call. I have also created some coding style rules to make the code more readable which are:
+- Start the function with a return
+- Use ternary as if-like statement
+
+You can find some honorable mentions [here](#honorable-mentions).
+
+## Functions
 
 Created        | Tested         | Name
 ---------------|----------------|-------
@@ -54,3 +73,10 @@ Created        | Tested         | Name
 🟩 | 🟩 | my_strupcase
 🟩 | 🟥 | my_swap
 🟥 | 🟥 | myf_putbase
+
+## Honorable mentions
+
+- [my_calloc](https://github.com/Miou-zora/lib-C-ursed/blob/6a611900b5271a5a32833514a0fb8db560f28ea3/lib/my/fonctions/my_calloc.c): cast a function that use void as return value to use it in a ternary operator.
+- [my_swap](https://github.com/Miou-zora/lib-C-ursed/blob/6a611900b5271a5a32833514a0fb8db560f28ea3/lib/my/fonctions/my_swap.c): use XOR operator to swap two values.
+- [data_to_array_str](https://github.com/Miou-zora/lib-C-ursed/blob/6a611900b5271a5a32833514a0fb8db560f28ea3/lib/my/fonctions/data_to_array_str.c) and [my_convert_base](https://github.com/Miou-zora/lib-C-ursed/blob/6a611900b5271a5a32833514a0fb8db560f28ea3/lib/my/fonctions/my_convert_base.c): biggests functions I've done.
+- [my_strstr](https://github.com/Miou-zora/lib-C-ursed/blob/6a611900b5271a5a32833514a0fb8db560f28ea3/lib/my/fonctions/my_strstr.c): no "ptr on func, ternary, if, else, while, for" recursive implementation
