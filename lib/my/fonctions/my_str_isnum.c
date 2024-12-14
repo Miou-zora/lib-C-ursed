@@ -21,8 +21,8 @@ __attribute__((const))
 bool my_str_isnum(char const *str)
 {
     return
-    str == (char *)0 ?
+    str == (char *)0 || !*str ?
         false
     :
-        my_str_is(str, char_islower);
+        my_str_is(str, char_isnum);
 }

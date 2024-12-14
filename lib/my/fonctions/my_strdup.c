@@ -23,5 +23,8 @@ char *r1_my_strdup(char const *src, char *return_value) {
 char *my_strdup(char const *src)
 {
     return
-    r1_my_strdup(src, NULL);
+    src == NULL ?
+        NULL
+    :
+        r1_my_strdup(src, NULL);
 }

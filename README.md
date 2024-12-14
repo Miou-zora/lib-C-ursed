@@ -53,17 +53,17 @@ Created        | Tested         | Name
 🟥 | 🟥 | my_sort_int_array
 🟩 | 🟩 | my_str_isalpha
 🟩 | 🟩 | my_str_isan
-🟩 | 🟥 | my_str_islower
-🟩 | 🟥 | my_str_isnum
-🟩 | 🟥 | my_str_isprintable
-🟩 | 🟥 | my_str_isupper
+🟩 | 🟩 | my_str_islower
+🟩 | 🟩 | my_str_isnum
+🟩 | 🟩 | my_str_isprintable
+🟩 | 🟩 | my_str_isupper
 🟥 | 🟥 | my_str_without_char_array
 🟥 | 🟥 | my_str_without_space
 🟩 | 🟩 | my_strcapitalize
 🟩 | 🟩 | my_strcat
 🟩 | 🟩 | my_strcmp
 🟩 | 🟩 | my_strcpy
-🟩 | 🟥 | my_strdup
+🟩 | 🟩 | my_strdup
 🟩 | 🟩 | my_strlen
 🟩 | 🟩 | my_strlowcase
 🟥 | 🟥 | my_strncat
@@ -71,7 +71,7 @@ Created        | Tested         | Name
 🟥 | 🟥 | my_strncpy
 🟩 | 🟩 | my_strstr (special case: no ternary, ptr on func, if, else, while, for recursive implementation)
 🟩 | 🟩 | my_strupcase
-🟩 | 🟥 | my_swap
+🟩 | 🟩 | my_swap
 🟥 | 🟥 | myf_putbase
 
 ## Honorable mentions
