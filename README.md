@@ -57,8 +57,8 @@ Created        | Tested         | Name
 🟩 | 🟩 | my_str_isnum
 🟩 | 🟩 | my_str_isprintable
 🟩 | 🟩 | my_str_isupper
-🟥 | 🟥 | my_str_without_char_array
-🟥 | 🟥 | my_str_without_space
+🟩 | 🟩 | my_str_without_char_array
+🟩 | 🟩 | my_str_without_space
 🟩 | 🟩 | my_strcapitalize
 🟩 | 🟩 | my_strcat
 🟩 | 🟩 | my_strcmp
