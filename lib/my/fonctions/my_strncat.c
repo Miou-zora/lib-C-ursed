@@ -6,15 +6,16 @@
 ** string to the end of the dest string.
 */
 
-int my_strlen(char *);
+#include "my.h"
+
+static char *r1_my_strcat(char *dest , char const *src , int nb, int destlen)
+{
+    return
+    my_strncpy(dest + destlen, src, nb) - destlen;
+}
 
 char *my_strncat(char *dest , char const *src , int nb)
 {
-    int dest_len = my_strlen(dest);
-    int i = 0;
-
-    for (; src[i] && i < nb; i++)
-        dest[dest_len + i] = src[i];
-    dest[dest_len + i] = '\0';
-    return dest;
+    return
+    r1_my_strcat(dest, src, nb, my_strlen(dest));
 }

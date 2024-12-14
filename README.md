@@ -25,7 +25,7 @@ You can find some honorable mentions [here](#honorable-mentions).
 
 ## Functions
 
-Created        | Tested         | Name
+Created (39 / 46)       | Tested (39 / 46)         | Name
 ---------------|----------------|-------
 🟩 | 🟩 | data_to_array_str (partially)
 🟩 | 🟩 | data_to_array_str (partially)
@@ -66,9 +66,9 @@ Created        | Tested         | Name
 🟩 | 🟩 | my_strdup
 🟩 | 🟩 | my_strlen
 🟩 | 🟩 | my_strlowcase
-🟥 | 🟥 | my_strncat
-🟥 | 🟥 | my_strncmp
-🟥 | 🟥 | my_strncpy
+🟩 | 🟩 | my_strncat
+🟩 | 🟩 | my_strncmp
+🟩 | 🟩 | my_strncpy
 🟩 | 🟩 | my_strstr (special case: no ternary, ptr on func, if, else, while, for recursive implementation)
 🟩 | 🟩 | my_strupcase
 🟩 | 🟩 | my_swap

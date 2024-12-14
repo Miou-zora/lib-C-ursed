@@ -7,10 +7,12 @@
 
 int my_strncmp(char const *s1 , char const *s2, int n)
 {
-    int value_s1 = 0;
-
-    for (int i = 0; s1[i] && s2[i] && i < n; i++) {
-        value_s1 += s1[i] - s2[i];
-    }
-    return (value_s1);
+    return
+    *s1 && *s2 && n ?
+        *s1 == *s2 ?
+            my_strncmp(s1 + 1, s2 + 1, n - 1)
+        :
+            *s1 - *s2
+    :
+        0;
 }

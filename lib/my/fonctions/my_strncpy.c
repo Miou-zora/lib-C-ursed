@@ -7,16 +7,9 @@
 
 char *my_strncpy(char *dest , char const *src , int n)
 {
-    int i = 0;
-
-    if (!dest || !src) {
-        return (0);
-    }
-    for (; i < n && src[i] != '\0'; i++) {
-        dest[i] = src[i];
-    }
-    if (i < n) {
-        dest[i] = '\0';
-    }
-    return (dest);
+    return
+    n && *src?
+        my_strncpy((*dest = *src) * 0 + dest + 1, src + 1, n - 1) - 1
+    :
+        dest;
 }
